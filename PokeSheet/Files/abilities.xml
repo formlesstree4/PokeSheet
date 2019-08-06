@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAbility xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Ability>
+    <Name>Adaptability</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When using Moves that deal damage and are the same elemental Type  as the Pokemon with Adaptability, gain  an additional 2 STAB instead of 1. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Aftermath</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the Pokemon is reduced to 0 HP or less, they create a 5-meter  Burst. Everything in the Burst loses � of  their full HP. Do not apply weakness or  resistance. Do not apply stats. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Air Lock</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Sustain</Keywords>
+    <Effect>The weather is set to normal as long as the Pokemon with Air Lock  wants it to remain that way.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Analytic</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>For the next 5 rounds, if the user's turn comes immediately after any  of its target's, in the queue, the user may  roll 2 extra STAB on damaging Moves  ignoring the Type of Move used.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Anger Point</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the Pokemon receives a Critical Hit, raise their Attack 6 Combat  Stages. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Anticipation</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>During an encounter you may target a Pokemon. Roll 1d20; on roll,  the target reveals if they have any  Moves that are Super-Effective against  the Pokemon with Anticipation; on  11 or better, the target reveals up to 3  moves that are Super-Effective against  the Pokemon with Anticipation; on  16 or better, the target reveals up to 5  moves that are Super-Effective against  the Pokemon with Anticipation and all  of those Moves must roll +1 during  Accuracy Check to hit the Pokemon  with Anticipation. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Arena Trap</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>A large wall of sand, 10-meters high surrounds the encounter. The  diameter of the Arena Trap must be at  least 10-meters but cannot be greater  then 40-meters. There must be sufficient  ground around to manipulate or the  Ability cannot be used. The walls are  constantly shifting making it impossible  to climb. If a section of the wall is  destroyed, it immediately restores itself.  If the caster is felled or returned to a  Poke Ball, the Arena Trap falls.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Bad Dreams</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Anything sleeping within 30-meters of the Pokemon with Bad  Dreams lose 1/8th of their full HP at the  beginning of each round. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Battle Armor</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Critical Hits </Effect>
+  </Ability>
+  <Ability>
+    <Name>Big Pecks</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>The user cannot have its Defense Stat lowered. The user cannot have its  Defense Combat Stages lowered.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Blaze</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Fire </Effect>
+  </Ability>
+  <Ability>
+    <Name>Chlorophyll</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Sunny Weather, the Speed stat of the Pokemon is doubled.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Clear Body</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's Combat Stages may not be lowered by the effect of  Abilities or Moves. Status effects may  still alter their Combat Stages. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Cloud Nine</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Return the Weather of the field to Normal if the Pokemon with Cloud Nine  is a higher level then the Pokemon who  caused the weather effect. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Color Change</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever the Pokemon is hit by a damage-dealing Move, the Pokemon  with Color Change will have its Type  changed to the same Type as that of the  Move it was damaged by.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Compound Eyes</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user needs -3 to hit on any Accuracy Check. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Contrary</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>If something would raise the user's Combat Stages, it instead lowers  the user's Combat Stages by the same  amount. If something would lower the  user's Combat Stages, it instead raises  the user's Combat Stages by the same  amount. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Cursed Body</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When a foe hits the Pokemon with Cursed Body with a melee Move,  that Move becomes Disabled after  damaged is dealt. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Cute Charm</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When an opposite gendered foe attacks the Pokemon with Cute Charm,  they become Infatuated after damaged is  dealt. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Damp</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Moves Selfdestruct and Explosion may not be used when  a Pokemon with Damp is within  20-meters of Selfdestruct or Explosion's  user. The Ability Aftermath may not be  activated when a Pokemon with Damp  is within 20-meters of the Pokemon  attempting to activate Aftermath. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Dark Art</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Dark </Effect>
+  </Ability>
+  <Ability>
+    <Name>Defeatist</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When below 50% HP, this Pokemon's Attack and Special Attack  is set at -3 Combat Stages. It cannot  be raised or lowered unless the user  recovers HP above 50% HP. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Defiant</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever the user has a Combat Stage lowered, by something other than  its own Moves or Abilities, the user's  Attack is raised 2 Combat Stages for  each Combat Stage it was lowered.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Download</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the Pokemon with Download targets with a damage-dealing  Move, the target must reveal which of its  defenses are lower. When the Pokemon  with Download attacks a foe, they are  treated as if their Attack is raised 1  Combat Stage if the target's Defense is  lower then the target's Special Defense.  When the Pokemon with Download  attacks a foe, they are treated as if their  Special Attack is raised 1 Combat Stage  if the target's Special Defense is lower  then the target's Defense. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Drizzle</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Sustain, Weather</Keywords>
+    <Effect>As a Free Action, the Pokemon uses the Move Rain Dance. The Rain  does not go away like normal Rain;  instead to Sustain, the Pokemon must  remain out of a Poke Ball and must be  above 0 HP. The Raining effect can  be replaced by other major Weather  conditions. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Drought</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Sustain, Weather</Keywords>
+    <Effect>As a Free Action, the Pokemon uses the Move Sunny day. The Sun does  not go away like normal Sun; instead to  Sustain, the Pokemon must remain out  of a Poke Ball and must be above 0 HP.  The Sunny effect can be replaced by  other major Weather conditions. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Dry Skin</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Sunny Weather, the user loses 1/8 of its full HP at the beginning  of each round. While in Rainy Weather,  the user gains 1/8 of its full HP at the  beginning of each round. Fire Type  Moves made towards the Pokemon with  Dry Skin deal damage as if the offender  is 1 Combat Stage higher in whichever  Attack Stat the Move consults. Water  Type Moves heal the Pokemon with Dry  Skin by calculating damage as if Dry  Skin's user is resistant to Water Moves  then healing that much HP instead of  dealing damage. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Early Bird</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When making Sleep Checks, the Sleep Check counter starts at 11. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Effect Spore</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When hit by a melee Move, roll 1d20; on a result of 15-16, the attacker  is Poisoned; on a result of 17-18, the  attacker is Paralyzed; on a result of 19- 20, the attacker falls Asleep. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Filter</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the user is hit by a Super- Effective attack, the attack deals 1.5x  damage instead of x2 damage. If the user  is hit by a Super-Super-Effective attack,  the attack deals x3 damage instead of x4  damage. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Flame Body</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When a foe hits the Pokemon with Flame Body with a melee Move,  they become Burned after damaged is  dealt. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Flare Boost</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Burned, the user's Special Attack is raised by 2 Combat Stages. If  the user is cured of its Burn, its Special  Attack is lowered by 2 Combat Stages. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Flash Fire</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user does not take damage from Fire Type Moves and may not be  Frozen. If the user is hit by a Fire Type  Move, the user adds 1 bonus STAB to  the next Fire Type Move they use in the  encounter.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Flower Gift</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Burst</Keywords>
+    <Effect>If it is Sunny, Flower Gift creates a 4-meter Burst. The user and all of  their allies in Sunny Weather have their  Attack raised 2 Combat Stages and have  their Special Defense raised 2 Combat  Stages. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Focus</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Fighting </Effect>
+  </Ability>
+  <Ability>
+    <Name>Forecast</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user's Type changes depending on the Weather the Pokemon  is in. It changes to Fire Type if it is  Sunny, Ice Type if it is Hailing, Water  Type if it is Rainy. It returns to Normal  Type if it is any other condition. If there  are multiple Weather Effects on the field,  choose one type for the user to be that  corresponds with an existing Weather  Effect. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Forewarn</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Move with the highest Damage Dice Roll known by the  targeted foe is revealed. If there is a tie,  all tied Moves are revealed. The Moves  revealed must roll +2 to hit during  Accuracy Checks. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Freezing Point</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Ice </Effect>
+  </Ability>
+  <Ability>
+    <Name>Friend Guard</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>For the rest of the encounter, any adjacent allied Pokemon who would be  hit by any Moves that have a Damage  Dice Roll of more than one die including  STAB or extra effects, the enemy does  not include STAB in their Damage Dice  Roll. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Frisk</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The adjacent target reveals what item they are holding, if any. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Gather</Name>
+    <Activation>Cast</Activation>
+    <Limit>Weekly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>1d2 Unown appear. They are not immediately hostile.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Gluttony</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When given a consumable item, the Pokemon immediately eats it. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Guts</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Burned, Poisoned, Paralyzed, Frozen or put to Sleep, the  user's Attack is raised 2 Combat Stages.  When a Pokemon loses the status, their  Combat Stages are lowered what they  raised. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Harvest</Name>
+    <Activation>Trigger</Activation>
+    <Limit>At</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever the user eats a Berry, flip a coin. On heads, the user produce  another berry of the exact same variety  as a held item available for use next  turn. On tails nothing happens. When  in Sunny Weather, Harvest will always  activate successfully.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Haunt</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Ghost </Effect>
+  </Ability>
+  <Ability>
+    <Name>Healer</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>One adjacent target suffering from at least one status affliction is  instantly cured of all status afflictions.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Heat Proof</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user halves the damage they would take from Fire Type Moves after  they apply weakness and resistance. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Heavy Metal</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When referring to Weight Classes, treat the Pokemon as if it is 2  Weight Classes higher. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Honey Gather</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user finds Honey if they are not holding an item. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Huge Power</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's base attack stat is doubled. This may double any  bonuses from Nature or Vitamins, but  not bonuses from Features. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Hustle</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user's Attack is raised 1 Combat Stages. The user must roll +2  during Accuracy Checks to hit with  attack that consult the Attack stat. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Hydration</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When in Rainy Weather, the user is healed of Paralysis, Burns, Poison,  Freezing or Sleep. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Hyper Cutter</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user's Attack Combat Stages may not be lowered. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Ice Body</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Hailing Weather, the user gains 1/16 of their full HP at the  beginning of each of their turns.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Illuminate</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Moves that target the user must roll +2 to hit during Accuracy Check. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Illusion</Name>
+    <Activation>Trigger</Activation>
+    <Limit>At</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever you this Pokemon is sent out of its Poke Ball, you may  choose another Pokemon that you have  with you. The user now looks exactly  like that Pokemon from your team until  the user takes Damage as a result of a  Move. This change is aesthetic and does  not affect typing or Moves. You may  dismiss Illusion whenever you want. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Immunity</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Poisoning </Effect>
+  </Ability>
+  <Ability>
+    <Name>Imposter</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Ditto is sent out, it may use the Move Transform as a free action.  If the target of Transform has any  modified Combat Stages, apply these  Combat Stages to Ditto. One of the  target's Abilities is randomly assigned to  Ditto until Ditto uses Transform again. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Infiltrator</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user ignores Walls and Hazards.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Inner Focus</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Flinching </Effect>
+  </Ability>
+  <Ability>
+    <Name>Insomnia</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Sleep </Effect>
+  </Ability>
+  <Ability>
+    <Name>Intimidate</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Lower one target's Attack 1 Combat Stage. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Iron Barbs</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When hit by a Melee Ranged Move, the attacking foe loses 1/8 of  their full HP. Do not apply weakness or  resistance. Do not apply stats. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Iron Fist</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Bullet Punch, Comet Punch, Dizzy Punch, Drain Punch,  Dynamicpunch, Fire Punch, Meteor  Mash, Shadow Punch, Sucker Punch,  Ice Punch, Mega Punch, Sky Uppercut,  Thunderpunch, Focus Punch, and  Hammer Arm deal an additional 1 STAB  when the Pokemon with Iron Fist uses  the Move as an attack. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Justified</Name>
+    <Activation>Trigger</Activation>
+    <Limit>At</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When hit by a damaging Dark Type Move, the user may raise its Attack  1 Combat Stage. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Keen Eye</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon cannot have its Accuracy Checks negatively affected  by anything except Defense, Special  Defense or Speed stats. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Klutz</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon with Klutz may drop held items, at-will, as a  Free Action, even if they have Status  Afflictions. The Pokemon may also hold  an item, and ignore any effects the item  has. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Landslide</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Ground </Effect>
+  </Ability>
+  <Ability>
+    <Name>Last Chance</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Normal </Effect>
+  </Ability>
+  <Ability>
+    <Name>Leaf Guard</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Sunny Weather, the user is healed of Paralysis, Burns, Poison,  Freezing or Sleep. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Levitate</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon is immune to Ground Type Moves. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Light Metal</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When referring to Weight Classes, treat the Pokemon as if it is 2  Weight Classes lower. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Lightningrod</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>If any other Pokemon within 25-meters uses a Ranged Electric  Type Move, the Move is drawn to the  Pokemon with Lightning Rod without  fail, and it cannot miss. This negates  Lock-On or Mind Reader. This Pokemon  is immune to damage and effects from  Electric Moves, and each time they are  hit by an Electric Move, the Pokemon's  Special Attack is raised 1 Combat Stage. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Limber</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Paralysis </Effect>
+  </Ability>
+  <Ability>
+    <Name>Liquid Ooze</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the Pokemon with Liquid Ooze is damaged or looses life as a  result of Absorb, Drain Punch, Giga  Drain, Horn Leech, Leech Life, Leech  Seed or Mega Drain, the Pokemon using  one of the above Moves lose life instead  of gaining life as described per Move.  Do not apply weakness or resistance. Do  not apply stats. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Mach Speed</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Flying </Effect>
+  </Ability>
+  <Ability>
+    <Name>Magic Bounce</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the user is hit by a Melee - No Damage or Ranged - No Damage  Move, it may reflect the Move back to  the offender. This Ability may be used  to change the placement of any Hazards  being set within 10 meters of the user as  well.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Magic Guard</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever the user would lose HP or take damage that isn't a result of a  Damage Dice Roll the user does not lose  HP or take Damage. This includes, but  is not limited to, Weather, Leech Seed,  Afflictions, Traps, Recoil, etc. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Magma Armor</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Freezing </Effect>
+  </Ability>
+  <Ability>
+    <Name>Magnet Pull</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Target Steel Type pokemon may not move more then 20-meters  away from the user, or target Steel Type  pokemon may not move closer then  20-meters to the user. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Marvel Scale</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Asleep, Paralyzed, Burned, Frozen or Poisoned, Marvel Scale raises  the user's Special Defense 2 Combat  Stages and raises the user's Defense  2 Combat Stages. The Combat Stages  return to normal if the user is cured of  their status affliction. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Mind Mold</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Psychic </Effect>
+  </Ability>
+  <Ability>
+    <Name>Minus</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When an ally with the Ability Plus is within 10 meters, they are treated  as if their Special Attack is raised 2  Combat Stages. The ally with Plus can  only have one Minus Ability applied to  its Special Attack. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Mold Breaker</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The target's Ability is disabled, it cannot be used until the end of the  encounter. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Moody</Name>
+    <Activation>Cast</Activation>
+    <Limit>Required on first turn of an</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Encounter. Cast Moody again in 1d4+1 rounds. Roll 1d6; on 1, re-roll; on 2,  raise the user's Attack 2 Combat Stages;  on 3, raise the user's Defense 2 Combat  Stages; on 4, raise the user's Special  Attack 2 Combat Stages; on 5, raise the  user's Special Defense 2 Combat Stages;  on 6, raise the user's Speed 2 Combat  Stages. Then roll 1d6; on 1, re-roll; on  2, lower the user's Attack 1 Combat  Stages; on 3, lower the user's Defense  1 Combat Stages; on 4, lower the user's  Special Attack 1 Combat Stages; on  5, lower the user's Special Defense 1  Combat Stages; on 6, lower the user's  Speed 1 Combat Stages.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Motor Drive</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The pokemon is immune to damage and the effects of Electric Type  Moves. Whenever an Electric Type  Move hits the pokemon, raise their  Speed 1 Combat Stage.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Mountain Peak</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Rock </Effect>
+  </Ability>
+  <Ability>
+    <Name>Moxie</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever a user's Move causes a target to faint, it may raise its Attack  Combat Stage by 1. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Multiscale</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When at full HP, when taking damage from a Move, half the total  damage before applying weakness  and resistance, before applying your  Defenses. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Multitype</Name>
+    <Activation>Cast</Activation>
+    <Limit>At Will</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Arceus changes its Elemental Type to any of the Elemental Types.  Multitype cannot be copied or disabled. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Mummy</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever the user is a Legal Target of a Melee Range Move, the  offender replaces all of its Abilities with  Mummy for 1d6+2 rounds. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Natural Cure</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon is cured of Paralysis, Poisoning, Burns, Freezing  and Sleep when returned to its Poke  Ball. </Effect>
+  </Ability>
+  <Ability>
+    <Name>No Guard</Name>
+    <Activation>Cast</Activation>
+    <Limit>At Will</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Once used, No Guard is in effect until the end of the Encounter. All  Moves you perform cannot miss and all  Moves that target you cannot miss.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Normalize</Name>
+    <Activation>Cast</Activation>
+    <Limit>At Will</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Once used, Normalize is in effect until the end of the Encounter.  All Moves performed by the Pokemon  are considered Normal Type instead of  whatever Type they normally are. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Oblivious</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Infatuation. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Overcharge</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Electric </Effect>
+  </Ability>
+  <Ability>
+    <Name>Overcoat</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user does not take damage from any Weather that would normally  cause it to take damage.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Overgrow</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Grass </Effect>
+  </Ability>
+  <Ability>
+    <Name>Own Tempo</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Confusion </Effect>
+  </Ability>
+  <Ability>
+    <Name>Pickpocket</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the user hits an opponent that has a Held Item with a Melee  Move, the user takes that item if it is not  holding any. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Pickup</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>Pickup</Keywords>
+    <Effect>You may use Pickup at the end of any encounter. Roll 1d20, consult the  Pickup keyword to figure out what you  find. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Plus</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When an ally with the Ability Minus is within 10 meters, they are  treated as if their Special Attack is raised  2 Combat Stages. The ally with Minus  can only have one Plus Ability applied  to its Special Attack. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Poison Heal</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Poisoned or Badly Poisoned, the pokemon gains 1/8 of its  full HP each turn instead of losing any  HP. The pokemon does not have any  Combat Stages lowered as a result of  being Poisoned. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Poison Point</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When hit by a melee Move, the Pokemon who attacked Poison Point's  user is Poisoned. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Poison Touch</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's Moves which deal damage Poison Legal Targets on  19-20. If a move already has a chance of  Poisoning foes, Poison Touch lowers the  number needed to roll in order to Poison  by -2.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Prankster</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>For the remainder of the encounter, any Ranged - No Damage,  Melee - No Damage, Self - No Damage  or Field - No Damage Moves the user  knows gain the keyword Interrupt.  Prankster may not be used with Moves  that set a Legal Target's HP to 0. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Pressure</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When this Ability is activated, all enemies have their Moves set to their  original frequency if they were able to  be used more frequently. In addition, At- Will moves are now EOT. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Pure Blooded</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Dragon </Effect>
+  </Ability>
+  <Ability>
+    <Name>Pure Power</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's base Attack Stat is doubled. This may double any  bonuses from Nature or Vitamins, but  not bonuses from Features. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Quick Feet</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Poisoned, Burned, Frozen or put to Sleep, the user's Speed is raised  2 Combat Stages. When Paralyzed, the  user's Speed is raised 4 Combat Stages.  When a Pokemon loses the status, their  Combat Stages are lowered what they  raised. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Rain Dish</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Rainy Weather, the user gains 1/16 of their full HP at the beginning of each of their turns.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Rattled</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When hit by Bug, Dark, or Ghost Type Move, the user may raise its Speed  1 Combat Stage.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Reckless</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Submission, Double-Edge, Take Down, Jump Kick, Hi Jump Kick, Volt  Tackle, Wood Hammer, Flare Blitz,  Brave Bird and Head Smash deal an  additional 2 STAB when the Pokemon  with Reckless uses the Move as an  attack. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Regenerator</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user instantly heals 1/4th of its max HP.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Rivalry</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When battling a same gendered foe, the user may raise their Attack 2  Combat stages. Rivalry may only be  only applied once per Encounter. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Rock Head</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the Pokemon uses Volt Tackle, Wood Hammer, Submission,  Take Down, Brave Bird, Double-Edge,  Flare Blitz, Head Smash, Jump Kick or  Hi Jump Kick they do not lose any HP  as a result of the Move's effect. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Rough Skin</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When hit by a Melee Ranged Move, the attacking foe loses 1/8 of  their full HP. Do not apply weakness or  resistance. Do not apply stats. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Run Away</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon escapes an encounter without fail. It can escape  Traps. If Run Away's user can hold  another Pokemon or their trainer, they  are freed from the encounter as well. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sand Force</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Sandstorming Weather, the user may activate Sand Force until  the end of an encounter. While active,  Sand Force makes the user immune to  damage from Sandstorms and the user  deals an additional 2 STAB with Rock,  Steel and Ground Moves regardless of  the user's Type. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sand Rush</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Sandstorming Weather, the user may activate Sand Rush until  the end of an encounter. While active,  Sand Rush makes the user immune to  damage from Sandstorms and its Speed  stat is raised 4 Combat Stages. Do not  add extra evasion to the user rasiing  Combat Stages.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sand Stream</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>Sustain, Weather</Keywords>
+    <Effect>As a Free Action, the Pokemon uses the Move Sandstorm. The  Sandstorm does not go away like  normal Sandstorm; instead to Sustain,  the Pokemon must remain out of a  Poke Ball and must be above 0 HP. The  Sandstorming effect can be replaced by  other major Weather conditions. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sand Veil</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Sustain</Keywords>
+    <Effect>Sand Veil may only be activated while in Sandstorming Weather. The  Pokemon creates a pocket of Clear  Weather around itself and any other  targets it wants to that is less then  15-meters away within the Sandstorm.  These are Sand Bubbles. Any Move that  tries to target into a Sand Bubble must  roll +2 to hit during Accuracy Check. To  Sustain, the Pokemon must remain out  of a Poke Ball and must be above 0 HP. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sap Sipper</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user does not take damage from Grass Type Moves. If a Grass Type  Move hits the user, the user may raise its  Attack 1 Combat Stage up to once per  turn. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Scrappy</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Moves the Pokemon uses against Ghost Type foes can always hit them.  Do not apply extra weaknesses or  resistances. Do not apply Immunities.  Count Moves those Ghost Type foes  would usually be Immune to as Neutral  Damaging Moves. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Serene Grace</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When a Move's effect has something that activates during  Accuracy Check, but only if you roll  high enough, all of those checks'  requirements to activate are reduced by  3. This does not apply to Critical Hits. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Shadow Tag</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Once adjacent to the target, they are Trapped. They may still Shift, but  cannot Shift more then 20-meters from  Shadow Tag's user. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Shed Skin</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon is cured of Paralysis, Freezing, Burns, Poison, and  Sleep. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sheer Force</Name>
+    <Activation>Cast</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Once used, Sheer Force is in effect until the end of the Encounter.  Whenever you use a move that has a  secondary effect, which activates during  Accuracy Check, that effect is ignored.  If an effect has been ignored, that attack  now deals an additional 2 STAB. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Shell Armor</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Immune</Keywords>
+    <Effect>Critical Hits </Effect>
+  </Ability>
+  <Ability>
+    <Name>Shield Dust</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The effects of damage dealing Moves that target the Pokemon with  Shield Dust are disabled.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Simple</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the Pokemon's Combat Stages are altered, double the amount  of Combat Stages they are raised or  lowered. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Skill Link</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's Moves with the keyword Scatter can be used for their  maximum amounts of time, even if one  of the first attempts misses. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Slow Start</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>For 3 rounds, the Pokemon's Speed and Attack Stats are halved. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sniper</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the Pokemon gets a Critical Hit, add an additional Damage  Dice Roll. This includes any base  damage in the Damage Dice Roll. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Snow Cloak</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Sustain</Keywords>
+    <Effect>Snow Cloak may only be activated while in Hailing Weather.  The Pokemon creates a pocket of Clear  Weather around itself and any other  targets it wants to that is less then  15-meters away within the Hail. These  are Snow Bubbles. Any Move that tries  to target into a Snow Bubble must roll  +2 to hit during Accuracy Check. To  Sustain, the Pokemon must remain out  of a Poke Ball and must be above 0 HP. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Snow Warning</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Sustain, Weather</Keywords>
+    <Effect>As a Free Action, the Pokemon uses the Move Hail.The Hail does not  go away like normal Hail; instead to  Sustain, the pokemon must remain out  of a Poke Ball and must be above 0 HP.  The Hailing effect can be replaced by  other major Weather conditions. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Solar Power</Name>
+    <Activation>Trigger </Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Sunny Weather, the Pokemon loses 1/8 of its full HP on its  turn. When Sunny, its Special Attack  Stat is increased by 2 Combat Stages. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Solid Rock</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Super Effective Moves that target the Pokemon are only regularly effective  and Super Super Effective Moves that  target the Pokemon are only Super  Effective. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Soundproof</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon is immune to damage caused by and the effects of  the Moves Bug Buzz, Chatter, Echoed  Voice, Grasswhistle, Growl, Heal Bell,  Hyper Voice, Metal Sound, Perish  Song, Relic Song, Roar, Roar of Time,  Screech, Sing, Snore, Supersonic and  Uproar. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Speed Boost</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's Speed is raised 1 Combat Stage on each of its turns. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Stall</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>In a round's queue, a Pokemon with Stall is always last. If a Pokemon  goes to the end of the queue, the  Pokemon with Stall is still the last to  move.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Static</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Daily</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When a foe hits the Pokemon with Static with a melee Move, they  become Paralyzed after damage is dealt. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Steadfast</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Flinched, the Pokemon's Speed is raised 1 Combat Stage. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Stench</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's Moves which deal damage Flinch Legal Targets on  19-20. If a move already has a chance  of Flinching foes, Stench lowers the  number needed to roll in order to Flinch  by -2. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sticky Hold</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's held items cannot be stolen, switched, destroyed or  dropped. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Storm Drain</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>If any other Pokemon within 25-meters uses a Ranged Water Type  Move, the Move is drawn to the  Pokemon with Storm Drain without fail,  and it cannot miss. This negates Lock- On or Mind Reader. This Pokemon is  immune to damage and effects from  Water Moves, and each time they are  hit by an Water Move, the Pokemon's  Special Attack is raised 1 Combat Stage. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Sturdy</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon is immune to the Moves Sheer Cold, Guillotine, Horn  Drill and Fissure. If any attack would  lower this Pokemon to 0 HP or less from  full HP, instead the Pokemon's HP is set  to 1. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Suction Cups</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon is immune to the Moves Roar and Whirlwind. The  Pokemon is immune to Push effects. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Super Luck</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon's Moves are Critical Hits on 18-20. If a Move already  has an extended Critical Hit range,  Super Luck extends that range by -2.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Swarm</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Bug </Effect>
+  </Ability>
+  <Ability>
+    <Name>Swift Swim</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While in Rainy Weather, the Speed stat of the Pokemon is raised 4  Combat Stages.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Synchronize</Name>
+    <Activation>Trigger</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When a foe Paralyzes, Freezes, Burns, Poisons, or puts the pokemon  with Synchronize to Sleep, the foe  is given the same Status effect they  inflicted. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Tangled Feet</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>While Confused, the Pokemon's foes must roll +3 during Accuracy  Check to hit the pokemon with Tangled  Feet. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Technician</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Moves with the Damage Dice Rolls whose Max Damage are less  than 30 add an additional 2d10 to their  Damage Dice Roll. Technician may only  be applied once when used with a Move  that has Scatter. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Telepathy</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever the Pokemon is a Legal Target, if the offender whose  Move is hitting the Pokemon does not  want the Pokemon to be considered a  Legal Target; it is not.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>Teravolt</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Target's Abilities are Disabled. They cannot be used until the  end of the encounter. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Thick Fat</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Pokemon is treated as if they are Resistant to Fire Type Moves and Ice  Type Moves. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Tinted Lens</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user's Resisted Moves instead deal Neutral Damage. The user's  Doubly Resisted Moves are instead  Resisted. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Torrent</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Last Chance</Keywords>
+    <Effect>Water </Effect>
+  </Ability>
+  <Ability>
+    <Name>Toxic Boost</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When Poisoned or Badly Poisoned, the user's Attack is raised by 2  Combat Stages. If the user is cured of its  Poisoning, its Attack stat is lowered by 2  Combat Stages. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Trace</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>Sustain</Keywords>
+    <Effect>The Pokemon gains the Ability of a target within 10-meters of the  Pokemon with Trace. To sustain, the  Pokemon must remain out of a Poke  Ball and above 0 HP. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Truant</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Roll 1d20 when a Pokemon with Truant tries to Shift and/or use a Move;  on 1-8, the Pokemon does nothing;  on 9-20, the Pokemon uses its turn  normally. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Turboblaze</Name>
+    <Activation>Cast</Activation>
+    <Limit>Hourly</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The Target's Abilities are Disabled. They cannot be used until the  end of the encounter. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Unaware</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>When the pokemon is attacking or being attacked, it ignores all Combat  Stages on the relevant target or attacker </Effect>
+  </Ability>
+  <Ability>
+    <Name>Unbreakable</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Keywords: Last Chance</Keywords>
+    <Effect>Steel </Effect>
+  </Ability>
+  <Ability>
+    <Name>Unburden</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>After consuming a held item, the Pokemon's Speed is raised 2 Combat  Stages. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Unnerve</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>During battle, as long as you have a line of sight to a foe, that foe may  not eat or drink anything. This includes  berries, vitamins, or anything else that  must be eaten to affect the foe. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Venom</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>Keywords: Last Chance</Keywords>
+    <Effect>Poison </Effect>
+  </Ability>
+  <Ability>
+    <Name>Victory Star</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Any allied Pokemon in the encounter will require -2 to hit with any  Accuracy Check. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Vital Spirit</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Keywords: Immune</Keywords>
+    <Effect>Sleep </Effect>
+  </Ability>
+  <Ability>
+    <Name>Volt Absorb</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>After calculating damage that would be dealt from an Electric Type  Move that hit the Pokemon, heal the  Pokemon half of what it would have  been dealt, instead of damaging the  Pokemon. Do this before applying  Defense but after applying weakness and  resistance. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Water Absorb</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>After calculating damage that would be dealt from an Water Type  Move that hit the Pokemon, heal the  Pokemon half of what it would have  been dealt instead of damaging the  Pokemon. Do this before applying  Defense but after applying weakness and  resistance. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Water Veil</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>Keywords: Immune</Keywords>
+    <Effect>Burns </Effect>
+  </Ability>
+  <Ability>
+    <Name>Weak Armor</Name>
+    <Activation>Trigger</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever the user is hit by an attack that consults the user's Defense  stat, the user may lower its Defense  Combat Stage one level in order to raise  its Speed Combat Stage one level.  </Effect>
+  </Ability>
+  <Ability>
+    <Name>White Smoke</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>The user's Combat Stages may not be lowered. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Wonder Guard</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Only damaging Moves that are Super-Effective hit the Pokemon with  Wonder Guard, all other moves always  deal 0 damage. Wonder Guard does not  work if the Pokemon who has it has no  weaknesses. Only Shedinja and Arceus  may ever have the ability Wonder  Guard. Wonder Guard loses its effect if  the user has no weaknesses. </Effect>
+  </Ability>
+  <Ability>
+    <Name>Wonder Skin</Name>
+    <Activation>Static</Activation>
+    <Limit>None</Limit>
+    <Keywords>None</Keywords>
+    <Effect>Whenever a Ranged - No Damage or Melee - No Damage move  that causes Paralysis, Poisoning, Bad  Poisoning, a Burn, Sleep, Confusion,  Attraction, Disable, or any other major  or minor status affliction is used against  this Pokemon and the Move successfully  hits, flip a coin. On heads, this Pokemon  ignores the affliction it would have  received; on tails the Pokemon is hit as  usual.  </Effect>
+  </Ability>
+</ArrayOfAbility>

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9598B936-C57F-497F-89E6-6797E9527B5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokeSheet</RootNamespace>
+    <AssemblyName>PokeSheet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Pokeball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\IniLibrary\IniLibrary\bin\Debug\IniLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\Sheet Windows\BigPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\BigPicture.Designer.cs">
+      <DependentUpon>BigPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogAbilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogAbilities.Designer.cs">
+      <DependentUpon>dialogAbilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogHeld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogHeld.Designer.cs">
+      <DependentUpon>dialogHeld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogMoves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogMoves.Designer.cs">
+      <DependentUpon>dialogMoves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Sheet Windows\dialogNotes.Designer.cs">
+      <DependentUpon>dialogNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Sheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Sheet.Designer.cs">
+      <DependentUpon>Sheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogAbilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogAbilities.Designer.cs">
+      <DependentUpon>dialogAbilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogAbout.Designer.cs">
+      <DependentUpon>dialogAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogBerry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogBerry.Designer.cs">
+      <DependentUpon>dialogBerry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogCapabilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogCapabilities.Designer.cs">
+      <DependentUpon>dialogCapabilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogKeywords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogKeywords.Designer.cs">
+      <DependentUpon>dialogKeywords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogMoves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogMoves.Designer.cs">
+      <DependentUpon>dialogMoves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogRecent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogRecent.Designer.cs">
+      <DependentUpon>dialogRecent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogSimple.Designer.cs">
+      <DependentUpon>dialogSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static.cs" />
+    <EmbeddedResource Include="Control\Sheet Windows\BigPicture.resx">
+      <DependentUpon>BigPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Sheet Windows\dialogAbilities.resx">
+      <DependentUpon>dialogAbilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Sheet Windows\dialogHeld.resx">
+      <DependentUpon>dialogHeld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Sheet Windows\dialogMoves.resx">
+      <DependentUpon>dialogMoves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Sheet Windows\dialogNotes.resx">
+      <DependentUpon>dialogNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Sheet.resx">
+      <DependentUpon>Sheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogAbilities.resx">
+      <DependentUpon>dialogAbilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogAbout.resx">
+      <DependentUpon>dialogAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogBerry.resx">
+      <DependentUpon>dialogBerry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogCapabilities.resx">
+      <DependentUpon>dialogCapabilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogKeywords.resx">
+      <DependentUpon>dialogKeywords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogMoves.resx">
+      <DependentUpon>dialogMoves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogRecent.resx">
+      <DependentUpon>dialogRecent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogSimple.resx">
+      <DependentUpon>dialogSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Parser\Parser.csproj">
+      <Project>{9123908E-1D33-4D61-9F10-6A4A63352C80}</Project>
+      <Name>Parser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\abilities.xml" />
+    <Content Include="Files\capabilities.xml" />
+    <Content Include="Files\info.txt" />
+    <Content Include="Files\move.xml" />
+    <Content Include="Files\pokemon.xml" />
+    <None Include="Resources\Pokeball.png" />
+    <None Include="Resources\Pokeball16.ico" />
+    <None Include="Resources\Pokeball32.ico" />
+    <None Include="Resources\Pokeball64.ico" />
+    <None Include="Resources\Pokeball.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

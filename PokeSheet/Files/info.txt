@@ -1,0 +1,1 @@
+﻿Dump the pokemon.xml, moves.xml, and abilities.xml files in here
