@@ -1,0 +1,13 @@
+﻿<TMs>
+  <Move ID="01" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="02" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="03" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="04" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="05" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="06" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="07" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="08" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="09" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="10" Name="Hone Claws" Type="TM"></Move>
+  <Move ID="A1" Name="Cut" Type="HM"></Move>
+</TMs>
