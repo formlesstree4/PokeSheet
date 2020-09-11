@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{9123908E-1D33-4D61-9F10-6A4A63352C80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeSheet", "PokeSheet\PokeSheet.csproj", "{9598B936-C57F-497F-89E6-6797E9527B5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedXml", "..\XmlAssembleDisassemble\ManagedXml.csproj", "{7E7F0604-FD97-4401-A11E-9752944DF694}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet", "PtaSheet\PtaSheet.csproj", "{D31C6F55-AA0B-4391-AD6A-C65213555686}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniLibrary", "C:\Users\Adam\Documents\Visual Studio 2012\Projects\IniLibrary\IniLibrary\IniLibrary.csproj", "{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniLibrary", "..\..\IniLibrary\IniLibrary.csproj", "{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,16 +41,6 @@ Global
 		{9598B936-C57F-497F-89E6-6797E9527B5F}.Release|Mixed Platforms.Build.0 = Release|x86
 		{9598B936-C57F-497F-89E6-6797E9527B5F}.Release|x86.ActiveCfg = Release|x86
 		{9598B936-C57F-497F-89E6-6797E9527B5F}.Release|x86.Build.0 = Release|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Debug|x86.ActiveCfg = Debug|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Debug|x86.Build.0 = Debug|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Release|Any CPU.ActiveCfg = Release|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Release|Mixed Platforms.Build.0 = Release|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Release|x86.ActiveCfg = Release|x86
-		{7E7F0604-FD97-4401-A11E-9752944DF694}.Release|x86.Build.0 = Release|x86
 		{D31C6F55-AA0B-4391-AD6A-C65213555686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D31C6F55-AA0B-4391-AD6A-C65213555686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D31C6F55-AA0B-4391-AD6A-C65213555686}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -66,17 +56,20 @@ Global
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Debug|x86.Build.0 = Debug|Any CPU
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{B863BCC7-6B91-4EB4-B189-BA2494ADB4AB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		BuildVersion_UseGlobalSettings = False
+		SolutionGuid = {D0935A13-29DA-4EE6-8BF4-3FA96577AEF0}
 	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
