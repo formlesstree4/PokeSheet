@@ -47,7 +47,7 @@ namespace PokeSheet.Control
             ini.Add(Pokemon, "nickname", tbNickname.Text);
             ini.Add(Pokemon, "level", nudLevel.Value);
             ini.Add(Pokemon, "experience", nudExperience.Value);
-            ini.Add(Pokemon, "species", cbSpecies.SelectedItem.ToString());
+            ini.Add(Pokemon, "species", GetCurrentPokemon().ToString());
             ini.Add(Pokemon, "gender", cbGender.SelectedIndex);
             ini.Add(Pokemon, "nature", cbNature.SelectedIndex);
             ini.Add(Pokemon, "currentHp", nudCurrentHealth.Value);
@@ -133,9 +133,6 @@ namespace PokeSheet.Control
             // hurr types
             cbTypeOne.SelectedIndex = ini.GetKeyValue(sectionName, "type1", cbTypeOne.Items.Count - 1);
             cbTypeTwo.SelectedIndex = ini.GetKeyValue(sectionName, "type2", cbTypeTwo.Items.Count - 1);
-
-            // Grab the current pokemon.
-            // var currentPkm = Static.Pokemon.First(p => p.Name.Equals(cbSpecies.SelectedItem.ToString()));
 
             // moves
             for (var i = 0; i < ini.GetKeyValue(sectionName, "moveCount", 0); i++)
@@ -276,33 +273,30 @@ namespace PokeSheet.Control
 
         private string CalculateDeoxys()
         {
-            if(cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("attack"))
-                return "attack";
-            if (cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("defense"))
-                return "defense";
-            if (cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("speed"))
-                return "speed";
+            var species = GetCurrentPokemon().Name.ToLowerInvariant();
+            if (species.Contains("attack")) return "attack";
+            if (species.Contains("defense")) return "defense";
+            if (species.Contains("speed")) return "speed";
             return "normal";
         }
         private string CalculateWormadam()
         {
-            if(cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("plant"))
-                return "plant";
-            if (cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("sandy"))
-                return "sandy";
+            var species = GetCurrentPokemon().Name.ToLowerInvariant();
+            if (species.Contains("plant")) return "plant";
+            if (species.Contains("sandy")) return "sandy";
             return "trash";
         }
         private string CalculateShaymin()
         {
-            return cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("sky") ? "sky" : "land";
+            return GetCurrentPokemon().Name.ToLowerInvariant().Contains("sky") ? "sky" : "land";
         }
         private string CalculateMeloetta()
         {
-            return cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("step") ? "step" : "aria";
+            return GetCurrentPokemon().Name.ToLowerInvariant().Contains("step") ? "step" : "aria";
         }
         private string CalculateGiratina()
         {
-            return cbSpecies.SelectedItem.ToString().ToLowerInvariant().Contains("origin") ? "origin" : "altered";
+            return GetCurrentPokemon().Name.ToLowerInvariant().Contains("origin") ? "origin" : "altered";
         }
 
         private int CalculatePoints()
@@ -641,15 +635,13 @@ namespace PokeSheet.Control
         {
 
             // who's the current pokemon
-            var currentPkm = Static.Pokemon.First(p => p.Name.Equals(cbSpecies.SelectedItem.ToString()));
+            var currentPkm = GetCurrentPokemon();
 
             // capabilities
             lvCapabilities.Items.Clear();
 
             // add the basic capabilities
             var cap = currentPkm.Capabilities;
-
-
 
             // add individual
             lvCapabilities.Items.Add(new ListViewItem
@@ -808,9 +800,16 @@ namespace PokeSheet.Control
                     imagePath = System.IO.Path.Combine(directory, nationalId.ToString(CultureInfo.InvariantCulture),
                                                        string.Format("{0}-{1}.png", nationalId, CalculateDeoxys()));
                     break;
+                case 412:
                 case 413:
                     imagePath = System.IO.Path.Combine(directory, nationalId.ToString(CultureInfo.InvariantCulture),
                                                        string.Format("{0}-{1}.png", nationalId, CalculateWormadam()));
+                    break;
+                case 479:
+                    // TODO: All of Rotom needs to be done
+                    //imagePath = System.IO.Path.Combine(directory, nationalId.ToString(CultureInfo.InvariantCulture),
+                    //                                   string.Format("{0}-{1}.png", nationalId, CalculateGiratina()));
+                    imagePath = System.IO.Path.Combine(directory, nationalId.ToString(CultureInfo.InvariantCulture), $"{nationalId}.png");
                     break;
                 case 487:
                     imagePath = System.IO.Path.Combine(directory, nationalId.ToString(CultureInfo.InvariantCulture),
@@ -846,10 +845,10 @@ namespace PokeSheet.Control
         }
         private void CbSpeciesSelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbSpecies.SelectedIndex <= -1 || string.IsNullOrEmpty(cbSpecies.SelectedItem.ToString())) return;
+            if (cbSpecies.SelectedIndex <= -1 || cbSpecies.SelectedItem is null) return;
 
             // who's the current pokemon
-            var currentPkm = Static.Pokemon.First(p => p.Name.Equals(cbSpecies.SelectedItem.ToString()));
+            var currentPkm = GetCurrentPokemon();
 
             // grab the current item and cast it
             // as a pokemon, then assign the img to the picture box
@@ -928,10 +927,7 @@ namespace PokeSheet.Control
             CanAddAbility();
 
             // set the nickname
-            Pokemon = string.IsNullOrEmpty(tbNickname.Text)
-                          ? cbSpecies.SelectedItem.ToString()
-                          : string.Format("{0} - ({1})", tbNickname.Text, cbSpecies.SelectedItem);
-            NameChanged(this, new PokemonNameChangeEventArgs {Name = Pokemon});
+            CalculatePokemonTabName();
 
             // load the types
             cbTypeOne.SelectedItem = currentPkm.Types[0].ToString();
@@ -1031,10 +1027,7 @@ namespace PokeSheet.Control
         }
         private void TbNicknameTextChanged(object sender, EventArgs e)
         {
-            Pokemon = string.IsNullOrEmpty(tbNickname.Text)
-                          ? cbSpecies.SelectedItem.ToString()
-                          : string.Format("{0} - ({1})", tbNickname.Text, cbSpecies.SelectedItem);
-            NameChanged(this, new PokemonNameChangeEventArgs { Name = Pokemon });
+            CalculatePokemonTabName();
         }
 
         private void NudLevelValueChanged(object sender, EventArgs e)
@@ -1135,7 +1128,7 @@ namespace PokeSheet.Control
         {
             var moves = new Sheet_Windows.DialogMoves
                             {
-                                Pokemon = Static.Pokemon.First(s=> s.Name == cbSpecies.SelectedItem.ToString()), 
+                                Pokemon = GetCurrentPokemon(),
                                 Level = (int)nudLevel.Value, 
                                 Learned = lvMoves.Items.Cast<ListViewItem>().Where(s => s.Group == lvMoves.Groups[0]).Select(s => s.Text).ToList(),
                                 LearnedEggs = lvMoves.Items.Cast<ListViewItem>().Where(s => s.Group == lvMoves.Groups[1]).Select(s => s.Text).ToList(),
@@ -1153,8 +1146,6 @@ namespace PokeSheet.Control
 
                 foreach (var selectedTutor in moves.SelectedTutor)
                     lvMoves.Items.Add(new ListViewItem(selectedTutor, lvMoves.Groups[2]));
-
-                
 
             }
 
@@ -1177,7 +1168,7 @@ namespace PokeSheet.Control
             var abilDlg = new Sheet_Windows.DialogAbilities();
 
             // we need to build a list of abilities, so get current pkm
-            var currentPkm = Static.Pokemon.First(p => p.Name.Equals(cbSpecies.SelectedItem.ToString()));
+            var currentPkm = GetCurrentPokemon();
 
             // get the abilities we currently know.
             var currentAbilities = (from object item in lvAbilities.Items select ((ListViewItem)item).Text).ToList();
@@ -1251,9 +1242,7 @@ namespace PokeSheet.Control
         private void PbPokemonClick(object sender, EventArgs e)
         {
             var bigPic = new BigPicture();
-            var img =
-                CalculatePokemonImage(
-                    Static.Pokemon.First(p => p.Name.Equals(cbSpecies.SelectedItem.ToString())).NationalNumber);
+            var img = CalculatePokemonImage(GetCurrentPokemon().NationalNumber);
             bigPic.BackgroundImage = img;
             bigPic.BackgroundImageLayout = ImageLayout.Stretch;
             bigPic.Width = Math.Min(500, img.Width);
@@ -1261,6 +1250,17 @@ namespace PokeSheet.Control
             Console.WriteLine(Resources.WidthHeightFormat, bigPic.Width, bigPic.Height);
             bigPic.ShowDialog();
             img.Dispose();
+        }
+
+        private Pokemon GetCurrentPokemon() => cbSpecies.SelectedItem as Parser.Types.Pokemon;
+
+        private void CalculatePokemonTabName()
+        {
+            var currentPkm = GetCurrentPokemon();
+            Pokemon = string.IsNullOrEmpty(tbNickname.Text)
+                          ? currentPkm.Name
+                          : string.Format("{0} - ({1})", tbNickname.Text, currentPkm.Name);
+            NameChanged(this, new PokemonNameChangeEventArgs { Name = Pokemon });
         }
 
         private class LvSort : System.Collections.IComparer
