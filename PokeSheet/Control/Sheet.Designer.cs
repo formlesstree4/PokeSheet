@@ -212,7 +212,6 @@
             this.pbPokemon.Size = new System.Drawing.Size(160, 140);
             this.pbPokemon.TabIndex = 3;
             this.pbPokemon.TabStop = false;
-            this.pbPokemon.Click += new System.EventHandler(this.PbPokemonClick);
             // 
             // label2
             // 
@@ -252,12 +251,12 @@
             this.cmsLevel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.makeExpMatchToolStripMenuItem});
             this.cmsLevel.Name = "cmsLevel";
-            this.cmsLevel.Size = new System.Drawing.Size(224, 26);
+            this.cmsLevel.Size = new System.Drawing.Size(225, 26);
             // 
             // makeExpMatchToolStripMenuItem
             // 
             this.makeExpMatchToolStripMenuItem.Name = "makeExpMatchToolStripMenuItem";
-            this.makeExpMatchToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.makeExpMatchToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.makeExpMatchToolStripMenuItem.Text = "Match Experience with Level";
             this.makeExpMatchToolStripMenuItem.Click += new System.EventHandler(this.MakeExpMatchToolStripMenuItemClick);
             // 
@@ -868,6 +867,7 @@
             this.lvCapabilities.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2});
+            this.lvCapabilities.HideSelection = false;
             this.lvCapabilities.Location = new System.Drawing.Point(3, 16);
             this.lvCapabilities.Name = "lvCapabilities";
             this.lvCapabilities.ShowItemToolTips = true;
@@ -900,6 +900,7 @@
             this.lvAbilities.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup3,
             listViewGroup4});
+            this.lvAbilities.HideSelection = false;
             this.lvAbilities.Location = new System.Drawing.Point(3, 16);
             this.lvAbilities.Name = "lvAbilities";
             this.lvAbilities.ShowItemToolTips = true;
@@ -1017,6 +1018,7 @@
             listViewGroup6,
             listViewGroup7,
             listViewGroup8});
+            this.lvMoves.HideSelection = false;
             this.lvMoves.Location = new System.Drawing.Point(6, 16);
             this.lvMoves.Name = "lvMoves";
             this.lvMoves.ShowItemToolTips = true;
@@ -1264,7 +1266,7 @@
             this.notesToolStripMenuItem,
             this.heldItemToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // statsToolStripMenuItem

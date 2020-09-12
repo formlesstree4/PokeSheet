@@ -1239,20 +1239,8 @@ namespace PokeSheet.Control
             CalculateCustomCapabilities();
         }
 
-        private void PbPokemonClick(object sender, EventArgs e)
-        {
-            var bigPic = new BigPicture();
-            var img = CalculatePokemonImage(GetCurrentPokemon().NationalNumber);
-            bigPic.BackgroundImage = img;
-            bigPic.BackgroundImageLayout = ImageLayout.Stretch;
-            bigPic.Width = Math.Min(500, img.Width);
-            bigPic.Height = Math.Min(500, img.Height);
-            Console.WriteLine(Resources.WidthHeightFormat, bigPic.Width, bigPic.Height);
-            bigPic.ShowDialog();
-            img.Dispose();
-        }
 
-        private Pokemon GetCurrentPokemon() => cbSpecies.SelectedItem as Parser.Types.Pokemon;
+        private Pokemon GetCurrentPokemon() => cbSpecies.SelectedIndex > -1 ? Static.Pokemon[cbSpecies.SelectedIndex] : null;
 
         private void CalculatePokemonTabName()
         {
