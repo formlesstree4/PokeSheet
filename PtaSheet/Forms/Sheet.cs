@@ -41,25 +41,17 @@ namespace PtaSheet.Forms
         private void PopulateGenderBox(bool male, bool female)
         {
 
-            if (!(male && female && icbGender.Items.Count() == 2) || ((male && !female) || (!male && female) && icbGender.Items.Count() == 1))
-            {
-                for (var i = icbGender.Items.Count() - 1; i > -1; i--)
-                    icbGender.Items.RemoveAt(i);
-
-                if (!male && !female) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Genderless", Properties.Resources.Sex_Male_Female_icon));
-                if (male) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Male", Properties.Resources.Male_icon));
-                if (female) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Female", Properties.Resources.Female_icon));
-                icbGender.SelectedIndex = 0;
-            }
+            icbGender.Items.Clear();
+            if (!male && !female) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Genderless", Properties.Resources.Sex_Male_Female_icon));
+            if (male) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Male", Properties.Resources.Male_icon));
+            if (female) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Female", Properties.Resources.Female_icon));
+            icbGender.SelectedIndex = 0;
             
-
         }
         private void PopulateImagedComboBoxes()
         {
-
             icbTypeOne.SuspendLayout();
             icbTypeTwo.SuspendLayout();
-
             icbPokemon.SuspendLayout();
 
             icbTypeOne.Items.Add(new ComboxExtended.ComboBoxItem("Bug", ImgResources.Types.BugIC));
@@ -100,8 +92,7 @@ namespace PtaSheet.Forms
             icbTypeTwo.Items.Add(new ComboxExtended.ComboBoxItem("Water", ImgResources.Types.WaterIC));
             
             // Pokedex.
-            var list = PokemonList.Children.OrderBy(c => 
-                Convert.ToInt32((c.GetElement("Pokedex").GetAttributeValue("National")))).ToList();
+            var list = PokemonList.Children.OrderBy(c => Convert.ToInt32((c.GetElement("Pokedex").GetAttributeValue("National")))).ToList();
 
             // now begin loading
             foreach (var element in list)
@@ -109,35 +100,36 @@ namespace PtaSheet.Forms
 
                 // Get basic values
                 var name = string.Format("#{0}: {1}", element.GetElement("Pokedex").GetAttributeValue("National").PadLeft(3, '0'), element.GetAttributeValue("Name"));
+                var nameLower = name.ToLowerInvariant();
                 var number = element.GetElement("Pokedex").GetAttributeValue("National");
                 var cb = new ComboxExtended.ComboBoxItem();
 
                 switch (number)
                 {
                     case "386":
-                        if (name.ToLower().Contains("attack"))
+                        if (nameLower.Contains("attack"))
                             number = "386a";
-                        if (name.ToLower().Contains("defense"))
+                        if (nameLower.Contains("defense"))
                             number = "386d";
-                        if (name.ToLower().Contains("speed"))
+                        if (nameLower.Contains("speed"))
                             number = "386s";
                         break;
                     case "413":
-                        if (name.ToLower().Contains("sandy"))
+                        if (nameLower.Contains("sandy"))
                             number = "413s";
-                        if (name.ToLower().Contains("trash"))
+                        if (nameLower.Contains("trash"))
                             number = "413t";
                         break;
                     case "487":
-                        if (name.ToLower().Contains("origin"))
+                        if (nameLower.Contains("origin"))
                             number = "487o";
                         break;
                     case "492":
-                        if (name.ToLower().Contains("sky"))
+                        if (nameLower.Contains("sky"))
                             number = "492s";
                         break;
                     case "648":
-                        if (name.ToLower().Contains("step"))
+                        if (nameLower.Contains("step"))
                             number = "648s";
                         break;
                 }
@@ -147,19 +139,16 @@ namespace PtaSheet.Forms
                 cb.Image = Classes.Runtime.GetImage("_" + number, Classes.Runtime.ResourceTypes.Icons);
                 
                 icbPokemon.Items.Add(cb);
-
             }
 
             icbTypeOne.ResumeLayout();
             icbTypeTwo.ResumeLayout();
-
             icbPokemon.ResumeLayout();
-            
         }
         public void SaveXml(string location)
         {
             var XmlBuilder = ManagedXml.Element.Create("Pokemon");
-            XmlBuilder.Encoding = System.Text.Encoding.UTF8;
+            XmlBuilder.Encoding = Encoding.UTF8;
 
             var General = ManagedXml.Element.Create("General");
             var Stats = ManagedXml.Element.Create("Stats");

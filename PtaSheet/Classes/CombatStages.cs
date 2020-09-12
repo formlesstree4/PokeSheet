@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PtaSheet.Classes
 {
@@ -33,8 +30,8 @@ namespace PtaSheet.Classes
                 case Types.SpDef: stages = SpDef; break;
                 case Types.Speed: stages = Speed; break;
             }
-            return stages > 0 ? (int)Math.Max(Math.Abs((((stages * (decimal)25) / 100) * value)) + value, 1) : 
-                (int)Math.Round(Math.Max(Math.Abs((((stages * (decimal)12.5) / 100) * value) - value), 1), 0);
+            return stages > 0 ? (int)Math.Max(Math.Abs(stages * (decimal)25 / 100 * value) + value, 1) : 
+                (int)Math.Round(Math.Max(Math.Abs((stages * (decimal)12.5 / 100 * value) - value), 1), 0);
             
         }
 
