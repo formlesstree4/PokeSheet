@@ -66,6 +66,128 @@ namespace WpfSheet.Content
             ImportFromJsonFiles();
         }
 
+
+        public static string RetrievePokemonImagePath(Pokemon p)
+        {
+            return RetrieveImageForType(p, "pokemon");
+        }
+
+        public static string RetrievePokemonSpritePath(Pokemon p)
+        {
+            return RetrieveImageForType(p, "sprites");
+        }
+
+        private static string RetrieveImageForType(Pokemon p, string folderType)
+        {
+            if (!int.TryParse(p.Pokedex.National, out var nationalId)) return null;
+            var basePath = Path.Combine(StartupPath, "Content", "Images", folderType);
+
+            switch (nationalId)
+            {
+                case 386: // Deoxys
+                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateDeoxysForme(p)}.png");
+                case 412: // Burmy
+                case 413: // Wormadam
+                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateBurmyForme(p)}.png");
+                case 479: // Rotom
+                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}{CalculateRotomForme(p)}.png");
+                case 487: // Giratina
+                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateGiratinaForme(p)}.png");
+                case 492: // Shaymin
+                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateShayminForme(p)}.png");
+                case 585: // Deerling
+                case 586: // Sawsbuck
+                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateAppropriateSeason()}.png");
+                case 648: // Meloetta
+                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateMeloettaForme(p)}.png");
+                default:
+                    return Path.Combine(basePath, $"{nationalId}.png");
+            }
+        }
+
+
+        
+
+        private static string CalculateDeoxysForme(Pokemon p)
+        {
+            var species = p.Name.ToLowerInvariant();
+            if (species.Contains("attack")) return "attack";
+            if (species.Contains("defense")) return "defense";
+            if (species.Contains("speed")) return "speed";
+            return "normal";
+        }
+
+        private static string CalculateBurmyForme(Pokemon p)
+        {
+            var species = p.Name.ToLowerInvariant();
+            if (species.Contains("plant")) return "plant";
+            if (species.Contains("sandy")) return "sandy";
+            return "trash";
+        }
+
+        private static string CalculateRotomForme(Pokemon p)
+        {
+            var species = p.Name.ToLowerInvariant();
+            if (species.Contains("fan")) return "-fan";
+            if (species.Contains("frost")) return "-frost";
+            if (species.Contains("heat")) return "-heat";
+            if (species.Contains("mow")) return "-mow";
+            if (species.Contains("wash")) return "-wash";
+            return string.Empty;
+        }
+
+        private static string CalculateGiratinaForme(Pokemon p)
+        {
+            return p.Name.ToLowerInvariant().Contains("origin") ? "origin" : "altered";
+        }
+
+        private static string CalculateShayminForme(Pokemon p)
+        {
+            return p.Name.ToLowerInvariant().Contains("sky") ? "sky" : "land";
+        }
+
+        private static string CalculateAppropriateSeason()
+        {
+            // This uses the implementation that Generation V utilized to determine what the visual effect
+            // of this Pokemon should look like. This was lifted straight out of Bulbapedia:
+            // https://bulbapedia.bulbagarden.net/wiki/Deerling_(Pok%C3%A9mon)
+            // https://bulbapedia.bulbagarden.net/wiki/Sawsbuck_(Pok%C3%A9mon)
+            switch (DateTime.Now.Month)
+            {
+                case 1: // January
+                case 5: // May
+                case 9: // September
+                    return "spring";
+
+                case 2: // February
+                case 6: // June
+                case 10: // October
+                    return "summer";
+
+                case 3: // March
+                case 7: // July
+                case 11: // November
+                    return "autumn";
+
+                case 4: // April
+                case 8: // August
+                case 12: // December
+                    return "winter";
+            }
+
+            // This is apparently the default type in games after Generation V.
+            // So we will default to that if, for whatever reason, we end up out here.
+            // In theory, this won't ever happen.
+            return "spring";
+
+        }
+
+        private static string CalculateMeloettaForme(Pokemon p)
+        {
+            return p.Name.ToLowerInvariant().Contains("step") ? "step" : "aria";
+        }
+
+
         /// <summary>
         ///     Sets up the container with the necessary data
         /// </summary>

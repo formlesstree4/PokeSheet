@@ -17,6 +17,9 @@ namespace WpfSheet.ViewModels
 
 
 
+        // public string DisplayName => 
+
+
         public Pokemon SelectedPokemon { get => _selectedPokemon; set => Set(nameof(SelectedPokemon), ref _selectedPokemon, value); }
         public ObservableCollection<Pokemon> PokemonSource { get => _pokemonSource; set => Set(nameof(PokemonSource), ref _pokemonSource, value); }
         public int HealthStat { get => _healthStat; set => Set(nameof(HealthStat), ref _healthStat, value); }
@@ -25,12 +28,14 @@ namespace WpfSheet.ViewModels
         public int SpecialAttackStat { get => _specialAttackStat; set => Set(nameof(SpecialAttackStat), ref _specialAttackStat, value); }
         public int SpecialDefenseStat { get => _specialDefenseStat; set => Set(nameof(SpecialDefenseStat), ref _specialDefenseStat, value); }
         public int SpeedStat { get => _speedStat; set => Set(nameof(SpeedStat), ref _speedStat, value); }
-
+        
 
 
         public SheetViewModel()
         {
-            PokemonSource = Content.ResourceHandler.Container.Resolve<PokemonCollection>().Pokemon;
+            // Container will probably be NULL in design time
+            if (Container is null) return;
+            PokemonSource = Container.Resolve<PokemonCollection>()?.Pokemon;
         }
 
 
