@@ -23,7 +23,7 @@
         public string Experience { get; set; }
 
 
-        public override string ToString() => $"{Pokedex.National.PadRight(3, '0')}: {Name}";
+        public override string ToString() => $"{Pokedex.National.ToString().PadRight(3, '0')}: {Name}";
 
     }
 

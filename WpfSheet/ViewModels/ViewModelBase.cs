@@ -24,13 +24,15 @@ namespace WpfSheet.ViewModels
         /// <param name="property">The name of the property that is being updated</param>
         /// <param name="oldValue">A reference to the current value</param>
         /// <param name="newValue">The new value to change to</param>
+        /// <param name="others">Additional properties to be invoked</param>
         /// <remarks>If <paramref name="oldValue"/> and <paramref name="newValue"/> are identical then no change notification events occur</remarks>
-        internal void Set<T>(string property, ref T oldValue, T newValue)
+        internal void Set<T>(string property, ref T oldValue, T newValue, params string[] others)
         {
             if (ReferenceEquals(oldValue, newValue)) return;
             OnPropertyChanging(property);
             oldValue = newValue;
             OnPropertyChanged(property);
+            foreach (var other in others) OnPropertyChanged(other);
         }
 
         private void OnPropertyChanged(string property)

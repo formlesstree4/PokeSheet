@@ -2,8 +2,8 @@
 {
     public sealed class Height
     {
-        public string Feet { get; set; }
-        public string Meters { get; set; }
+        public decimal Feet { get; set; }
+        public decimal Meters { get; set; }
         public string Class { get; set; }
     }
 

@@ -3118,7 +3118,7 @@
             "Class": "Small"
          },
          "Weight": {
-            "Pounds": "17.9.",
+            "Pounds": "17.9",
             "Kilograms": "8.1",
             "Class": "1"
          },
@@ -154629,7 +154629,7 @@
          },
          "Height": {
             "Feet": "4.58",
-            "Meters": "1.4m ",
+            "Meters": "1.4",
             "Class": "Large"
          },
          "Weight": {

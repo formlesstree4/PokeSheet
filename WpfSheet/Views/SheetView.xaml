@@ -4,6 +4,7 @@
     xmlns:c="clr-namespace:WpfSheet.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:m="clr-namespace:WpfSheet.Models"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:WpfSheet.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -13,7 +14,8 @@
     Background="White">
     <UserControl.Resources>
         <ResourceDictionary>
-            <c:PokemonToImageSourceConverter x:Key="PokemonToImageSourceConverter"/>
+            <c:PokemonImageSourceConverter x:Key="PokemonImageSourceConverter"/>
+            <c:SpriteImageSourceConverter x:Key="SpriteImageSourceConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -35,7 +37,7 @@
             Grid.Column="0"
             Grid.Row="0"
             Margin="8">
-            <Image Source="{Binding SelectedPokemon, Converter={StaticResource PokemonToImageSourceConverter}}"/>
+            <Image Source="{Binding SelectedPokemon, Converter={StaticResource PokemonImageSourceConverter}}"/>
         </Border>
 
         <Grid
@@ -43,7 +45,9 @@
             Grid.ColumnSpan="2"
             Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -61,18 +65,83 @@
                 VerticalAlignment="Center"/>
             <ComboBox
                 Grid.Column="1"
+                Grid.ColumnSpan="2"
                 Grid.Row="0"
                 ItemsSource="{Binding PokemonSource}"
-                Margin="4"
+                Margin="2"
                 SelectedItem="{Binding SelectedPokemon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate DataType="{x:Type m:Pokemon}">
-                        <StackPanel>
-                            
+                        <StackPanel Orientation="Horizontal">
+                            <Image
+                                Height="24"
+                                Margin="0"
+                                Source="{Binding Converter={StaticResource SpriteImageSourceConverter}}"
+                                VerticalAlignment="Center"
+                                Width="24"/>
+                            <TextBlock VerticalAlignment="Center">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}#{0}: {1}">
+                                        <Binding Path="Pokedex.National"/>
+                                        <Binding Path="Name"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+            <Button
+                Content="Search..."
+                Grid.Column="3"
+                Grid.Row="0"
+                Margin="4"/>
+
+            <TextBlock
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalAlignment="Right"
+                Margin="4"
+                Text="Level:"
+                VerticalAlignment="Center"/>
+            <mah:NumericUpDown
+                Grid.Column="1"
+                Grid.Row="1"
+                HideUpDownButtons="True"
+                Minimum="1"
+                Maximum="100"
+                Margin="2"
+                Value="{Binding CurrentLevel}"/>
+
+            <TextBlock
+                Grid.Column="2"
+                Grid.Row="1"
+                HorizontalAlignment="Right"
+                Margin="4"
+                Text="Experience:"
+                VerticalAlignment="Center"/>
+            <mah:NumericUpDown
+                Grid.Column="3"
+                Grid.Row="1"
+                HideUpDownButtons="True"
+                Minimum="0"
+                Margin="2"
+                Value="{Binding CurrentExperience}"/>
+
+            <TextBlock
+                Grid.Column="0"
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                Margin="4"
+                Text="Nickname:"
+                VerticalAlignment="Center"/>
+
+            <TextBox
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                Margin="2"
+                Text="{Binding Nickname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
 
         </Grid>

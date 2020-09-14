@@ -2,8 +2,8 @@
 {
     public sealed class Gender
     {
-        public string Male { get; set; }
-        public string Female { get; set; }
+        public decimal Male { get; set; }
+        public decimal Female { get; set; }
     }
 
 }

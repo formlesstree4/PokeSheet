@@ -2,12 +2,12 @@
 {
     public sealed class BaseStats
     {
-        public string Health { get; set; }
-        public string Attack { get; set; }
-        public string Defense { get; set; }
-        public string SpecialAttack { get; set; }
-        public string SpecialDefense { get; set; }
-        public string Speed { get; set; }
+        public int Health { get; set; }
+        public int Attack { get; set; }
+        public int Defense { get; set; }
+        public int SpecialAttack { get; set; }
+        public int SpecialDefense { get; set; }
+        public int Speed { get; set; }
     }
 
 }

@@ -3,8 +3,8 @@
     public sealed class Pokedex
     {
         public string Entry { get; set; }
-        public string National { get; set; }
-        public string PTA { get; set; }
+        public int National { get; set; }
+        public int PTA { get; set; }
     }
 
 }

@@ -6,6 +6,11 @@ using System.Security.Permissions;
 using System.Text;
 using DryIoc;
 using WpfSheet.Models;
+using WpfSheet.ViewModels;
+using System.Linq;
+using System.Collections.ObjectModel;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace WpfSheet.Content
 {
@@ -35,7 +40,7 @@ namespace WpfSheet.Content
         /// <summary>
         ///     Gets the absolute path where the Ability JSON file is located.
         /// </summary>
-        public static string GetAbilityFile => Path.Combine(StartupPath, "JSON", "abilities.json");
+        public static string GetAbilityFile => Path.Combine(StartupPath, "Content", "JSON", "abilities.json");
 
         /// <summary>
         ///     Gets the startup path of this program.
@@ -57,14 +62,22 @@ namespace WpfSheet.Content
 
 
 
-        /// <summary>
-        ///     Initialize the resource handler
-        /// </summary>
-        public static void Initialize()
+        public static MainWindowViewModel MainViewModel => Container.Resolve<MainWindowViewModel>();
+
+        public static SheetViewModel PokemonSheetViewModel => Container.Resolve<SheetViewModel>();
+
+        public static ImageSource ApplicationIcon => new BitmapImage(new Uri(Path.Combine(StartupPath, "Content", "Images", "app-icon.ico")));
+
+
+
+        static ResourceHandler()
         {
             Container = new Container();
             ImportFromJsonFiles();
+            Container.Register<MainWindowViewModel>();
+            Container.Register<SheetViewModel>();
         }
+
 
 
         public static string RetrievePokemonImagePath(Pokemon p)
@@ -79,7 +92,8 @@ namespace WpfSheet.Content
 
         private static string RetrieveImageForType(Pokemon p, string folderType)
         {
-            if (!int.TryParse(p.Pokedex.National, out var nationalId)) return null;
+            //if (!int.TryParse(p.Pokedex.National, out var nationalId)) return null;
+            var nationalId = p.Pokedex.National;
             var basePath = Path.Combine(StartupPath, "Content", "Images", folderType);
 
             switch (nationalId)
@@ -104,9 +118,6 @@ namespace WpfSheet.Content
                     return Path.Combine(basePath, $"{nationalId}.png");
             }
         }
-
-
-        
 
         private static string CalculateDeoxysForme(Pokemon p)
         {
@@ -200,6 +211,9 @@ namespace WpfSheet.Content
             var pokemonCollection = JsonConvert.DeserializeObject<PokemonCollection>(rawPokemonContent);
             var moveCollection = JsonConvert.DeserializeObject<MoveCollection>(rawMoveContent);
             var abilityCollection = JsonConvert.DeserializeObject<AbilityCollection>(rawAbilityContent);
+
+            // Order the pokemon collection (since National is STILL a string
+            pokemonCollection.Pokemon = new ObservableCollection<Pokemon>(pokemonCollection.Pokemon.OrderBy(p => p.Pokedex.National));
 
             Container.RegisterInstance(pokemonCollection);
             Container.RegisterInstance(moveCollection);

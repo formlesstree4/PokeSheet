@@ -1,13 +1,61 @@
-﻿<Window
+﻿<mah:MetroWindow
     x:Class="WpfSheet.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:g="clr-namespace:WpfSheet.Content"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:WpfSheet"
+    xmlns:v="clr-namespace:WpfSheet.Views"
+    xmlns:vm="clr-namespace:WpfSheet.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     mc:Ignorable="d"
-    Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    DataContext="{x:Static g:ResourceHandler.MainViewModel}"
+    Height="450"
+    Icon="{x:Static g:ResourceHandler.ApplicationIcon}"
+    Title="WpfSheet"
+    Width="800">
 
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button
+                Content="New Pokemon..."
+                Command="{Binding AddNewTabCommand}">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="Add" />
+                            <TextBlock Margin="4 0 0 0"
+                         VerticalAlignment="Center"
+                         Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+
+
+    <Grid>
+        <mah:MetroTabControl ItemsSource="{Binding Sheets}">
+            <mah:MetroTabControl.ItemTemplate>
+                <DataTemplate DataType="{x:Type vm:SheetViewModel}">
+                    <TextBlock Text="{Binding DisplayName}"/>
+                </DataTemplate>
+            </mah:MetroTabControl.ItemTemplate>
+            <mah:MetroTabControl.ContentTemplate>
+                <DataTemplate DataType="{x:Type vm:SheetViewModel}">
+                    <v:SheetView DataContext="{Binding}"/>
+                </DataTemplate>
+            </mah:MetroTabControl.ContentTemplate>
+        </mah:MetroTabControl>
+        <!--<TabControl>
+            <TabItem Header="1">
+                <v:SheetView DataContext="{x:Static g:ResourceHandler.PokemonSheetViewModel}" />
+            </TabItem>
+            <TabItem Header="2">
+                <v:SheetView DataContext="{x:Static g:ResourceHandler.PokemonSheetViewModel}" />
+            </TabItem>
+        </TabControl>-->
     </Grid>
-</Window>
+</mah:MetroWindow>

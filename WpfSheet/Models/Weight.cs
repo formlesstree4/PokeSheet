@@ -2,8 +2,8 @@
 {
     public sealed class Weight
     {
-        public string Pounds { get; set; }
-        public string Kilograms { get; set; }
+        public decimal Pounds { get; set; }
+        public decimal Kilograms { get; set; }
         public string Class { get; set; }
     }
 
