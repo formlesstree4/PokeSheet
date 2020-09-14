@@ -20,7 +20,7 @@ namespace WpfSheet.Content
         /// <summary>
         ///     Gets the dependency injection container.
         /// </summary>
-        public static IContainer Container { get; private set; }
+        public static Container Container { get; private set; }
 
         /// <summary>
         ///     Gets the absolute path where the Pokemon JSON file is located.
