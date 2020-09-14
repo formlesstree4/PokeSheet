@@ -1,6 +1,6 @@
 ﻿namespace WpfSheet.Models
 {
-    public class Pokedex
+    public sealed class Pokedex
     {
         public string Entry { get; set; }
         public string National { get; set; }

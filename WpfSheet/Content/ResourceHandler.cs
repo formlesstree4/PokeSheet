@@ -17,7 +17,9 @@ namespace WpfSheet.Content
 
         private static string _path = null;
 
-
+        /// <summary>
+        ///     Gets the dependency injection container.
+        /// </summary>
         public static IContainer Container { get; private set; }
 
         /// <summary>
@@ -31,7 +33,12 @@ namespace WpfSheet.Content
         public static string GetMoveFile => Path.Combine(StartupPath, "Content", "JSON", "moves.json");
 
         /// <summary>
-        /// Returns the startup path of this program.
+        ///     Gets the absolute path where the Ability JSON file is located.
+        /// </summary>
+        public static string GetAbilityFile => Path.Combine(StartupPath, "JSON", "abilities.json");
+
+        /// <summary>
+        ///     Gets the startup path of this program.
         /// </summary>
         public static string StartupPath
         {
@@ -66,11 +73,15 @@ namespace WpfSheet.Content
         {
             var rawPokemonContent = File.ReadAllText(GetPokemonFile);
             var rawMoveContent = File.ReadAllText(GetMoveFile);
+            var rawAbilityContent = File.ReadAllText(GetAbilityFile);
+
             var pokemonCollection = JsonConvert.DeserializeObject<PokemonCollection>(rawPokemonContent);
             var moveCollection = JsonConvert.DeserializeObject<MoveCollection>(rawMoveContent);
+            var abilityCollection = JsonConvert.DeserializeObject<AbilityCollection>(rawAbilityContent);
 
             Container.RegisterInstance(pokemonCollection);
             Container.RegisterInstance(moveCollection);
+            Container.RegisterInstance(abilityCollection);
         }
 
     }

@@ -14,6 +14,9 @@ namespace WpfSheet.Models
         /// </summary>
         public ObservableCollection<Pokemon> Pokemon { get; set; }
 
+
+        public override string ToString() => $"Pokemon: {Pokemon.Count} item(s)";
+
     }
 
 }
