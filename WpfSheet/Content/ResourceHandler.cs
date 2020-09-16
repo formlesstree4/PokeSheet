@@ -11,6 +11,8 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace WpfSheet.Content
 {
@@ -43,6 +45,11 @@ namespace WpfSheet.Content
         public static string GetAbilityFile => Path.Combine(StartupPath, "Content", "JSON", "abilities.json");
 
         /// <summary>
+        ///     Gets the absolute path where the Nature JSON file is located.
+        /// </summary>
+        public static string GetNatureFile => Path.Combine(StartupPath, "Content", "JSON", "natures.json");
+
+        /// <summary>
         ///     Gets the startup path of this program.
         /// </summary>
         public static string StartupPath
@@ -69,7 +76,6 @@ namespace WpfSheet.Content
         public static ImageSource ApplicationIcon => new BitmapImage(new Uri(Path.Combine(StartupPath, "Content", "Images", "app-icon.ico")));
 
 
-
         static ResourceHandler()
         {
             Container = new Container();
@@ -89,6 +95,90 @@ namespace WpfSheet.Content
         {
             return RetrieveImageForType(p, "sprites");
         }
+
+        public static IEnumerable<string> RetrievePokemonGenders(Pokemon p)
+        {
+            var genders = new List<string>();
+            if (p.Gender.Male > 0) genders.Add("Male");
+            if (p.Gender.Female > 0) genders.Add("Female");
+            if (!genders.Any()) genders.Add("Genderless");
+            return genders;
+        }
+
+        public static int GetExperienceForLevel(int level)
+        {
+            var levelToExperience = new[]
+            {
+                0,25,50,100,150,200,400,600,800,1000,1500,2000,3000,4000,5000,6000,
+                7000,8000,9000,10000,11500,13000,14500,16000,17500,19000,20500,22000,
+                23500,25000,27500,30000,32500,35000,37500,40000,42500,45000,47500,50000,
+                55000,60000,65000,70000,75000,80000,85000,90000,95000
+            };
+
+            if (level < 0) level = 0;
+            if (level >= 50) return 100000 + (10000 * (level - 50));
+            return levelToExperience[level - 1];
+        }
+
+        public static int CalculateAvailablePoints(int level)
+        {
+
+            // Here's the variable that holds the number of points
+            // we are allowed to have.
+            var points = 0;
+
+
+            /*
+             * - From Levels 1 to 50, a Pokemon will gain 1 point PER level
+             * 
+             * - Starting at level 51, Pokemon gain two Added Stats per level gained. 
+             *   These two stats may not be put into the same Stat. 
+             *   When adding stats, a Pokemon’s Base Relation must still be maintained.
+             * 
+             * - Starting at level 76, Pokemon gain three Added Stats per level gained. 
+             *   These three stats may not be put into the same Stat. 
+             *   When adding stats, a Pokemon’s Base Relation must still be maintained.
+             * 
+             */
+
+
+            if (level <= 50) return level - 1;
+
+            // subtract 50 points from the current level.
+            level -= 50;
+
+            // add 50 points to counter balance the level.
+            points += 50;
+
+            // 51 - 50 = 1
+            // 76 - 50 = 26
+            // Now let's see if we are >= 26
+            if (level >= 26)
+            {
+                // remove 25 and multiply by three.
+                points += (level - 25) * 3;
+                level -= (level - 25);
+            }
+
+            // any extra points are multiplied by 2.
+            points += level * 2;
+
+            // all done, subtract 1 because f*ck level 1. :D
+            return points - 1;
+
+
+        }
+
+        public static int CalculateStab(int level)
+        {
+            return (int)Math.DivRem((long)level, 5, out _);
+        }
+
+        public static int CalculateHealth(int level, int hpStat)
+        {
+            return (hpStat * 3) + level;
+        }
+
 
         private static string RetrieveImageForType(Pokemon p, string folderType)
         {
@@ -207,10 +297,12 @@ namespace WpfSheet.Content
             var rawPokemonContent = File.ReadAllText(GetPokemonFile);
             var rawMoveContent = File.ReadAllText(GetMoveFile);
             var rawAbilityContent = File.ReadAllText(GetAbilityFile);
+            var rawNatureContent = File.ReadAllText(GetNatureFile);
 
             var pokemonCollection = JsonConvert.DeserializeObject<PokemonCollection>(rawPokemonContent);
             var moveCollection = JsonConvert.DeserializeObject<MoveCollection>(rawMoveContent);
             var abilityCollection = JsonConvert.DeserializeObject<AbilityCollection>(rawAbilityContent);
+            var natureCollection = JsonConvert.DeserializeObject<NatureCollection>(rawNatureContent);
 
             // Order the pokemon collection (since National is STILL a string
             pokemonCollection.Pokemon = new ObservableCollection<Pokemon>(pokemonCollection.Pokemon.OrderBy(p => p.Pokedex.National));
@@ -218,6 +310,7 @@ namespace WpfSheet.Content
             Container.RegisterInstance(pokemonCollection);
             Container.RegisterInstance(moveCollection);
             Container.RegisterInstance(abilityCollection);
+            Container.RegisterInstance(natureCollection);
         }
 
     }

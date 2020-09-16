@@ -40,6 +40,7 @@
             <Image Source="{Binding SelectedPokemon, Converter={StaticResource PokemonImageSourceConverter}}"/>
         </Border>
 
+        <!-- General Pokemon Information here -->
         <Grid
             Grid.Column="1"
             Grid.ColumnSpan="2"
@@ -103,7 +104,13 @@
                 HorizontalAlignment="Right"
                 Margin="4"
                 Text="Level:"
-                VerticalAlignment="Center"/>
+                VerticalAlignment="Center">
+                <TextBlock.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Command="{Binding CalculateExperienceForLevel}" Header="Match Experience..."/>
+                    </ContextMenu>
+                </TextBlock.ContextMenu>
+            </TextBlock>
             <mah:NumericUpDown
                 Grid.Column="1"
                 Grid.Row="1"
@@ -143,6 +150,33 @@
                 Margin="2"
                 Text="{Binding Nickname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
+            <TextBlock
+                Grid.Column="0"
+                Grid.Row="3"
+                HorizontalAlignment="Right"
+                Margin="4"
+                Text="Gender:"
+                VerticalAlignment="Center"/>
+
+            <ComboBox
+                Grid.Column="1"
+                Grid.Row="3"
+                ItemsSource="{Binding Genders}"
+                Margin="2"
+                SelectedItem="{Binding SelectedGender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock
+                Grid.Column="2"
+                Grid.Row="3"
+                HorizontalAlignment="Right"
+                Margin="4"
+                Text="Nature:"
+                VerticalAlignment="Center"/>
+
+            <ComboBox
+                Grid.Column="3"
+                Grid.Row="3"
+                Margin="2"/>
 
         </Grid>
 

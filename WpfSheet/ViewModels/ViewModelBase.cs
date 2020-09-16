@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using WpfSheet.Content;
 
 namespace WpfSheet.ViewModels
@@ -26,22 +27,30 @@ namespace WpfSheet.ViewModels
         /// <param name="newValue">The new value to change to</param>
         /// <param name="others">Additional properties to be invoked</param>
         /// <remarks>If <paramref name="oldValue"/> and <paramref name="newValue"/> are identical then no change notification events occur</remarks>
-        internal void Set<T>(string property, ref T oldValue, T newValue, params string[] others)
+        internal void Set<T>(
+            string property,
+            ref T oldValue,
+            T newValue,
+            Action propertyChanged = null,
+            Action propertyChanging = null,
+            params string[] others)
         {
             if (ReferenceEquals(oldValue, newValue)) return;
             OnPropertyChanging(property);
+            propertyChanging?.Invoke();
             oldValue = newValue;
             OnPropertyChanged(property);
+            propertyChanged?.Invoke();
             foreach (var other in others) OnPropertyChanged(other);
         }
 
-        private void OnPropertyChanged(string property)
+        internal void OnPropertyChanged(string property)
         {
             var pc = PropertyChanged;
             pc?.Invoke(this, new PropertyChangedEventArgs(property));
         }
 
-        private void OnPropertyChanging(string property)
+        internal void OnPropertyChanging(string property)
         {
             var pc = PropertyChanging;
             pc?.Invoke(this, new PropertyChangingEventArgs(property));
