@@ -37,7 +37,9 @@
 
 
     <Grid>
-        <mah:MetroTabControl ItemsSource="{Binding Sheets}">
+        <mah:MetroTabControl
+            ItemsSource="{Binding Sheets}"
+            SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <mah:MetroTabControl.ItemTemplate>
                 <DataTemplate DataType="{x:Type vm:SheetViewModel}">
                     <TextBlock Text="{Binding DisplayName}"/>
@@ -49,13 +51,5 @@
                 </DataTemplate>
             </mah:MetroTabControl.ContentTemplate>
         </mah:MetroTabControl>
-        <!--<TabControl>
-            <TabItem Header="1">
-                <v:SheetView DataContext="{x:Static g:ResourceHandler.PokemonSheetViewModel}" />
-            </TabItem>
-            <TabItem Header="2">
-                <v:SheetView DataContext="{x:Static g:ResourceHandler.PokemonSheetViewModel}" />
-            </TabItem>
-        </TabControl>-->
     </Grid>
 </mah:MetroWindow>

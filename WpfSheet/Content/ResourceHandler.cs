@@ -11,7 +11,6 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace WpfSheet.Content
@@ -28,6 +27,22 @@ namespace WpfSheet.Content
         ///     Gets the dependency injection container.
         /// </summary>
         public static Container Container { get; private set; }
+
+        /// <summary>
+        ///     Gets the ViewModel used for the Main Window
+        /// </summary>
+        public static MainWindowViewModel MainViewModel => Container.Resolve<MainWindowViewModel>();
+
+        /// <summary>
+        ///     Gets the ViewModel used for the Sheet
+        /// </summary>
+        public static SheetViewModel PokemonSheetViewModel => Container.Resolve<SheetViewModel>();
+
+        /// <summary>
+        ///     Gets the Application Icon
+        /// </summary>
+        public static ImageSource ApplicationIcon => new BitmapImage(new Uri(Path.Combine(StartupPath, "Content", "Images", "app-icon.ico")));
+
 
         /// <summary>
         ///     Gets the absolute path where the Pokemon JSON file is located.
@@ -67,13 +82,9 @@ namespace WpfSheet.Content
             }
         }
 
-
-
-        public static MainWindowViewModel MainViewModel => Container.Resolve<MainWindowViewModel>();
-
-        public static SheetViewModel PokemonSheetViewModel => Container.Resolve<SheetViewModel>();
-
-        public static ImageSource ApplicationIcon => new BitmapImage(new Uri(Path.Combine(StartupPath, "Content", "Images", "app-icon.ico")));
+        public static readonly Color NegativeStat = Color.FromArgb(255, 0, 198, 245);
+        public static readonly Color PositiveStat = Color.FromArgb(255, 222, 23, 56);
+        public static readonly Color NeutralStat = Color.FromArgb(255, 0, 0, 0);
 
 
         static ResourceHandler()
@@ -166,7 +177,6 @@ namespace WpfSheet.Content
             // all done, subtract 1 because f*ck level 1. :D
             return points - 1;
 
-
         }
 
         public static int CalculateStab(int level)
@@ -182,31 +192,41 @@ namespace WpfSheet.Content
 
         private static string RetrieveImageForType(Pokemon p, string folderType)
         {
-            //if (!int.TryParse(p.Pokedex.National, out var nationalId)) return null;
             var nationalId = p.Pokedex.National;
             var basePath = Path.Combine(StartupPath, "Content", "Images", folderType);
+            string path;
 
             switch (nationalId)
             {
                 case 386: // Deoxys
-                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateDeoxysForme(p)}.png");
+                    path = Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateDeoxysForme(p)}.png");
+                    break;
                 case 412: // Burmy
                 case 413: // Wormadam
-                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateBurmyForme(p)}.png");
+                    path = Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateBurmyForme(p)}.png");
+                    break;
                 case 479: // Rotom
-                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}{CalculateRotomForme(p)}.png");
+                    path = Path.Combine(basePath, nationalId.ToString(), $"{nationalId}{CalculateRotomForme(p)}.png");
+                    break;
                 case 487: // Giratina
-                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateGiratinaForme(p)}.png");
+                    path = Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateGiratinaForme(p)}.png");
+                    break;
                 case 492: // Shaymin
-                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateShayminForme(p)}.png");
+                    path = Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateShayminForme(p)}.png");
+                    break;
                 case 585: // Deerling
                 case 586: // Sawsbuck
-                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateAppropriateSeason()}.png");
+                    path = Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateAppropriateSeason()}.png");
+                    break;
                 case 648: // Meloetta
-                    return Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateMeloettaForme(p)}.png");
+                    path = Path.Combine(basePath, nationalId.ToString(), $"{nationalId}-{CalculateMeloettaForme(p)}.png");
+                    break;
                 default:
-                    return Path.Combine(basePath, $"{nationalId}.png");
+                    path = Path.Combine(basePath, $"{nationalId}.png");
+                    break;
             }
+            if (!File.Exists(path)) path = Path.Combine(StartupPath, "Content", "Images", "missing.png");
+            return path;
         }
 
         private static string CalculateDeoxysForme(Pokemon p)
