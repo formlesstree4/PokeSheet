@@ -37,13 +37,13 @@ namespace WpfSheet.ViewModels
         #endregion EXTERNAL PROPERTIES
 
         #region SHEET PROPERTIES
-        public int CurrentLevel { get => _currentLevel; set => Set(nameof(CurrentLevel), ref _currentLevel, value, others: nameof(MaximumRemainingStatPoints)); }
+        public int CurrentLevel { get => _currentLevel; set => Set(nameof(CurrentLevel), ref _currentLevel, value, others: new[] { nameof(MaximumRemainingStatPoints), nameof(CurrentStab) }); }
         public int CurrentExperience { get => _currentExperience; set => Set(nameof(CurrentExperience), ref _currentExperience, value, CheckForLevelChange); }
         public string Nickname { get => _nickname; set => Set(nameof(Nickname), ref _nickname, value, others: nameof(DisplayName)); }
         public string DisplayName => !string.IsNullOrWhiteSpace(Nickname) ? $"{Nickname} ({SelectedPokemon.Name})" : SelectedPokemon.Name;
         public ObservableCollection<string> Genders { get => _genders; set => Set(nameof(Genders), ref _genders, value); }
         public string SelectedGender { get => _selectedGender; set => Set(nameof(SelectedGender), ref _selectedGender, value); }
-
+        public int CurrentStab { get => CalculateStab(CurrentLevel); }
         #endregion SHEET PROPERTIES
 
         #region COMMANDS
@@ -51,6 +51,7 @@ namespace WpfSheet.ViewModels
         public ICommand CalculateExperienceForLevel { get => _calculateExperienceForLevel; set => Set(nameof(CalculateExperienceForLevel), ref _calculateExperienceForLevel, value); }
 
         #endregion COMMANDS
+
 
 
         public SheetViewModel()
@@ -66,11 +67,6 @@ namespace WpfSheet.ViewModels
             CurrentLevel = 1;
             CalculateExperienceForLevel = new RelayCommand(SetExperienceForLevel);
         }
-
-
-
-
-
 
 
 
@@ -101,7 +97,10 @@ namespace WpfSheet.ViewModels
             SelectedGender = Genders.First();
         }
 
-
+        private int CalculateStab(int level)
+        {
+            return (int)Math.DivRem((long)level, 5, out _);
+        }
 
     }
 }

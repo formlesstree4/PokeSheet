@@ -104,6 +104,7 @@
                 <Button
                     Content="🔍"
                     Grid.Column="1"
+                    IsEnabled="False"
                     ToolTip="Search..."/>
             </Grid>
             
@@ -196,17 +197,30 @@
             Grid.Column="0"
             Grid.ColumnSpan="2"
             Grid.Row="1"
-            Header="{Binding MaximumRemainingStatPoints, UpdateSourceTrigger=PropertyChanged}"
-            HeaderStringFormat="Stats: {0} remaining"
+            Header="{Binding}"
             Margin="2">
+            <GroupBox.HeaderTemplate>
+                <DataTemplate DataType="{x:Type vm:SheetViewModel}">
+                    <DockPanel>
+                        <TextBlock
+                            DockPanel.Dock="Left"
+                            Text="{Binding MaximumRemainingStatPoints, UpdateSourceTrigger=PropertyChanged, StringFormat='{}{0} points remaining'}"/>
+                        <TextBlock
+                            DockPanel.Dock="Right"
+                            TextAlignment="Right"
+                            Text="{Binding CurrentStab, UpdateSourceTrigger=PropertyChanged, StringFormat='STAB: {0}'}"
+                            ToolTip="Same Type Attack Bonus"/>
+                    </DockPanel>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="30"/>
                     <ColumnDefinition Width="15"/>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="15"/>
-                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="30"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -470,5 +484,106 @@
             
         </GroupBox>
 
+        <!-- Type Details -->
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="1">
+            <GroupBox
+                Header="Types"
+                Margin="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Margin="2"
+                        Text="Type 1:"
+                        TextAlignment="Right"
+                        VerticalAlignment="Center"/>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="2"
+                        Text="Type 2:"
+                        TextAlignment="Right"
+                        VerticalAlignment="Center"/>
+
+                    <ComboBox
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Margin="2"/>
+
+                    <ComboBox
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="2"/>
+                    
+                </Grid>
+            </GroupBox>
+            <GroupBox
+                Header="Evasions"
+                Margin="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Margin="2"
+                        Text="Physical:"
+                        TextAlignment="Right"
+                        ToolTip="Every 5 points in Defense will equate to one point"/>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="2"
+                        Text="Special:"
+                        TextAlignment="Right"
+                        ToolTip="Every 5 points in Special Defense will equate to one point"/>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Margin="2"
+                        Text="Both:"
+                        TextAlignment="Right"
+                        ToolTip="Every 10 points in Speed will equate to one point"/>
+
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Margin="2"
+                        Text="{Binding PhysicalBonus}"
+                        ToolTip="Every 5 points in Defense will equate to one point"/>
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="2"
+                        Text="{Binding SpecialBonus}"
+                        ToolTip="Every 5 points in Special Defense will equate to one point"/>
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Margin="2"
+                        Text="{Binding SpeedBonus}"
+                        ToolTip="Every 10 points in Speed will equate to one point"/>
+                </Grid>
+            </GroupBox>
+
+        </StackPanel>
+        
     </Grid>
 </UserControl>

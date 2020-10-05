@@ -1582,6 +1582,7 @@
     <Content Include="Resources\Pokemon\Footprints\97.png" />
     <Content Include="Resources\Pokemon\Footprints\98.png" />
     <Content Include="Resources\Pokemon\Footprints\99.png" />
+    <Content Include="Resources\Types\FairyIC.gif" />
     <Content Include="Resources\XML\exp.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
