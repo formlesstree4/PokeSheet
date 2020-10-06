@@ -9,14 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Content\Images\Types\FairyIC.gif" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Content\Images\Types\FairyIC.gif" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="DryIoc.dll" Version="4.4.1" />
     <PackageReference Include="MahApps.Metro" Version="2.2.0" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="4.4.0" />

@@ -14,7 +14,7 @@
     Height="450"
     Icon="{x:Static g:ResourceHandler.ApplicationIcon}"
     Title="WpfSheet"
-    Width="800">
+    Width="575" MinWidth="575">
 
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
@@ -39,7 +39,8 @@
     <Grid>
         <mah:MetroTabControl
             ItemsSource="{Binding Sheets}"
-            SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Style="{StaticResource MahApps.Styles.TabControl.AnimatedSingleRow}">
             <mah:MetroTabControl.ItemTemplate>
                 <DataTemplate DataType="{x:Type vm:SheetViewModel}">
                     <TextBlock Text="{Binding DisplayName}"/>
@@ -47,7 +48,9 @@
             </mah:MetroTabControl.ItemTemplate>
             <mah:MetroTabControl.ContentTemplate>
                 <DataTemplate DataType="{x:Type vm:SheetViewModel}">
-                    <v:SheetView DataContext="{Binding}"/>
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                        <v:SheetView DataContext="{Binding}"/>
+                    </ScrollViewer>
                 </DataTemplate>
             </mah:MetroTabControl.ContentTemplate>
         </mah:MetroTabControl>

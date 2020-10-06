@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using DryIoc;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using WpfSheet.Mvvm;
 
@@ -19,7 +20,7 @@ namespace WpfSheet.ViewModels
         {
             AddNewTabCommand = new RelayCommand(() =>
             {
-                Sheets.Add(new SheetViewModel());
+                Sheets.Add(Container.Resolve<SheetViewModel>());
                 SelectedTabIndex = Sheets.Count - 1;
             });
         }

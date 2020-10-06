@@ -65,6 +65,11 @@ namespace WpfSheet.Content
         public static string GetNatureFile => Path.Combine(StartupPath, "Content", "JSON", "natures.json");
 
         /// <summary>
+        ///     Gets the absolute path where the Types JSON file is located.
+        /// </summary>
+        public static string GetTypesFile => Path.Combine(StartupPath, "Content", "JSON", "types.json");
+
+        /// <summary>
         ///     Gets the startup path of this program.
         /// </summary>
         public static string StartupPath
@@ -115,6 +120,8 @@ namespace WpfSheet.Content
             if (!genders.Any()) genders.Add("Genderless");
             return genders;
         }
+
+        public static string RetrieveTypeImagePath(PokemonType t) => Path.Combine(StartupPath, "Content", "Images", "Types", t.Icon);
 
         public static int GetExperienceForLevel(int level)
         {
@@ -318,19 +325,23 @@ namespace WpfSheet.Content
             var rawMoveContent = File.ReadAllText(GetMoveFile);
             var rawAbilityContent = File.ReadAllText(GetAbilityFile);
             var rawNatureContent = File.ReadAllText(GetNatureFile);
+            var rawTypesContent = File.ReadAllText(GetTypesFile);
 
             var pokemonCollection = JsonConvert.DeserializeObject<PokemonCollection>(rawPokemonContent);
             var moveCollection = JsonConvert.DeserializeObject<MoveCollection>(rawMoveContent);
             var abilityCollection = JsonConvert.DeserializeObject<AbilityCollection>(rawAbilityContent);
             var natureCollection = JsonConvert.DeserializeObject<NatureCollection>(rawNatureContent);
+            var typeCollection = JsonConvert.DeserializeObject<TypesCollection>(rawTypesContent);
 
-            // Order the pokemon collection (since National is STILL a string
+            // Order the Pokemon Collection
             pokemonCollection.Pokemon = new ObservableCollection<Pokemon>(pokemonCollection.Pokemon.OrderBy(p => p.Pokedex.National));
 
             Container.RegisterInstance(pokemonCollection);
             Container.RegisterInstance(moveCollection);
             Container.RegisterInstance(abilityCollection);
             Container.RegisterInstance(natureCollection);
+            Container.RegisterInstance(typeCollection);
+
         }
 
     }

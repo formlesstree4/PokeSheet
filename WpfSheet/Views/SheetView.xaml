@@ -8,22 +8,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:WpfSheet.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    d:DataContext="{d:DesignInstance vm:SheetViewModel, IsDesignTimeCreatable=True}"
+    d:DataContext="{d:DesignInstance vm:SheetViewModel}"
     d:DesignHeight="622" d:DesignWidth="530"
     mc:Ignorable="d"
     Background="White">
     <UserControl.Resources>
         <ResourceDictionary>
             <c:PokemonNatureToColorConverter x:Key="PokemonNatureToColorConverter"/>
+            <c:PokemonTypeImageSourceConverter x:Key="PokemonTypeImageSourceConverter"/>
             <c:PokemonImageSourceConverter x:Key="PokemonImageSourceConverter"/>
             <c:SpriteImageSourceConverter x:Key="SpriteImageSourceConverter"/>
+            <DataTemplate DataType="{x:Type m:PokemonType}" x:Key="PokemonTypeDataTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding Converter={StaticResource PokemonTypeImageSourceConverter}}" Margin="2"/>
+                    <TextBlock
+                        Margin="2"
+                        Text="{Binding Name}"/>
+                </StackPanel>
+            </DataTemplate>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="136"/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="136"/>
@@ -484,11 +493,82 @@
             
         </GroupBox>
 
-        <!-- Type Details -->
-        <StackPanel
+        <!-- Type, Evasion, and Abilities -->
+        <Grid
             Grid.Column="2"
             Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <GroupBox
+                Grid.Column="0"
+                Header="Evasions"
+                Margin="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Margin="2"
+                        Text="Physical:"
+                        TextAlignment="Right"
+                        ToolTip="Every 5 points in Defense will equate to one point"
+                        VerticalAlignment="Center"/>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="2"
+                        Text="Special:"
+                        TextAlignment="Right"
+                        ToolTip="Every 5 points in Special Defense will equate to one point"
+                        VerticalAlignment="Center"/>
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Margin="2"
+                        Text="Both:"
+                        TextAlignment="Right"
+                        ToolTip="Every 10 points in Speed will equate to one point"
+                        VerticalAlignment="Center"/>
+
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Margin="2"
+                        Text="{Binding PhysicalBonus}"
+                        ToolTip="Every 5 points in Defense will equate to one point"
+                        VerticalAlignment="Center"/>
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="2"
+                        Text="{Binding SpecialBonus}"
+                        ToolTip="Every 5 points in Special Defense will equate to one point"
+                        VerticalAlignment="Center"/>
+                    <TextBlock
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Margin="2"
+                        Text="{Binding SpeedBonus}"
+                        ToolTip="Every 10 points in Speed will equate to one point"
+                        VerticalAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox
+                Grid.Column="1"
                 Header="Types"
                 Margin="2">
                 <Grid>
@@ -518,72 +598,31 @@
                     <ComboBox
                         Grid.Column="1"
                         Grid.Row="0"
-                        Margin="2"/>
+                        ItemsSource="{Binding Types}"
+                        ItemTemplate="{StaticResource PokemonTypeDataTemplate}"
+                        Margin="2"
+                        SelectedItem="{Binding FirstType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <ComboBox
                         Grid.Column="1"
                         Grid.Row="1"
-                        Margin="2"/>
+                        ItemsSource="{Binding Types}"
+                        ItemTemplate="{StaticResource PokemonTypeDataTemplate}"
+                        Margin="2"
+                        SelectedItem="{Binding SecondType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     
                 </Grid>
             </GroupBox>
+
             <GroupBox
-                Header="Evasions"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Header="Abilities"
                 Margin="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <TextBlock
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        Margin="2"
-                        Text="Physical:"
-                        TextAlignment="Right"
-                        ToolTip="Every 5 points in Defense will equate to one point"/>
-                    <TextBlock
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        Margin="2"
-                        Text="Special:"
-                        TextAlignment="Right"
-                        ToolTip="Every 5 points in Special Defense will equate to one point"/>
-                    <TextBlock
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        Margin="2"
-                        Text="Both:"
-                        TextAlignment="Right"
-                        ToolTip="Every 10 points in Speed will equate to one point"/>
-
-                    <TextBlock
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        Margin="2"
-                        Text="{Binding PhysicalBonus}"
-                        ToolTip="Every 5 points in Defense will equate to one point"/>
-                    <TextBlock
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        Margin="2"
-                        Text="{Binding SpecialBonus}"
-                        ToolTip="Every 5 points in Special Defense will equate to one point"/>
-                    <TextBlock
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        Margin="2"
-                        Text="{Binding SpeedBonus}"
-                        ToolTip="Every 10 points in Speed will equate to one point"/>
-                </Grid>
+                
             </GroupBox>
-
-        </StackPanel>
+        </Grid>
         
     </Grid>
 </UserControl>
