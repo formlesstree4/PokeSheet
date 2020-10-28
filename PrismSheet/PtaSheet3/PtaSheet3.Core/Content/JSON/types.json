@@ -1,0 +1,137 @@
+﻿{
+  "PokemonTypes": [
+    {
+      "Name": "Normal",
+      "Icon": "NormalIC.gif",
+      "StrongAgainst": [],
+      "WeakAgainst": [ "Rock", "Steel" ],
+      "ImmuneAgainst": [ "Ghost" ]
+    },
+    {
+      "Name": "Fighting",
+      "Icon": "FightingIC.gif",
+      "StrongAgainst": [ "Normal", "Rock", "Steel", "Ice", "Dark" ],
+      "WeakAgainst": [ "Flying", "Poison", "Bug", "Psychic", "Fairy" ],
+      "ImmuneAgainst": [ "Ghost" ]
+    },
+    {
+      "Name": "Flying",
+      "Icon": "FlyingIC.gif",
+      "StrongAgainst": [ "Fighting", "Bug", "Grass" ],
+      "WeakAgainst": [ "Rock", "Steel", "Electric" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Poison",
+      "Icon": "PoisonIC.gif",
+      "StrongAgainst": [ "Grass", "Fairy" ],
+      "WeakAgainst": [ "Poison", "Ground", "Rock", "Ghost" ],
+      "ImmuneAgainst": [ "Steel" ]
+    },
+    {
+      "Name": "Ground",
+      "Icon": "GroundIC.gif",
+      "StrongAgainst": [ "Poison", "Rock", "Steel", "Fire", "Electric" ],
+      "WeakAgainst": [ "Bug", "Grass" ],
+      "ImmuneAgainst": [ "Flying" ]
+    },
+    {
+      "Name": "Rock",
+      "Icon": "RockIC.gif",
+      "StrongAgainst": [ "Flying", "Bug", "Fire", "Ice" ],
+      "WeakAgainst": [ "Fighting", "Ground", "Steel" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Bug",
+      "Icon": "BugIC.gif",
+      "StrongAgainst": [ "Grass", "Psychic", "Dark" ],
+      "WeakAgainst": [ "Fighting", "Flying", "Poison", "Ghost", "Steel", "Fire", "Fairy" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Ghost",
+      "Icon": "GhostIC.gif",
+      "StrongAgainst": [ "Ghost", "Psychic" ],
+      "WeakAgainst": [ "Dark" ],
+      "ImmuneAgainst": [ "Normal" ]
+    },
+    {
+      "Name": "Steel",
+      "Icon": "SteelIC.gif",
+      "StrongAgainst": [ "Rock", "Ice", "Fairy" ],
+      "WeakAgainst": [ "Steel", "Fire", "Water", "Electric" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Fire",
+      "Icon": "FireIC.gif",
+      "StrongAgainst": [ "Bug", "Steel", "Grass", "Ice" ],
+      "WeakAgainst": [ "Rock", "Fire", "Water", "Dragon" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Water",
+      "Icon": "WaterIC.gif",
+      "StrongAgainst": [ "Ground", "Rock", "Fire" ],
+      "WeakAgainst": [ "Water", "Grass", "Dragon" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Grass",
+      "Icon": "GrassIC.gif",
+      "StrongAgainst": [ "Ground", "Rock", "Water" ],
+      "WeakAgainst": [ "Flying", "Poison", "Bug", "Steel", "Fire", "Grass", "Dragon" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Electric",
+      "Icon": "ElectricIC.gif",
+      "StrongAgainst": [ "Flying", "Water" ],
+      "WeakAgainst": [ "Grass", "Electric", "Dragon" ],
+      "ImmuneAgainst": [ "Ground" ]
+    },
+    {
+      "Name": "Psychic",
+      "Icon": "PsychicIC.gif",
+      "StrongAgainst": [ "Fighting", "Poison" ],
+      "WeakAgainst": [ "Steel", "Psychic" ],
+      "ImmuneAgainst": [ "Dark" ]
+    },
+    {
+      "Name": "Ice",
+      "Icon": "IceIC.gif",
+      "StrongAgainst": [ "Flying", "Ground", "Grass", "Dragon" ],
+      "WeakAgainst": [ "Steel", "Fire", "Water", "Ice" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Dragon",
+      "Icon": "DragonIC.gif",
+      "StrongAgainst": [ "Dragon" ],
+      "WeakAgainst": [ "Steel" ],
+      "ImmuneAgainst": [ "Fairy" ]
+    },
+    {
+      "Name": "Dark",
+      "Icon": "DarkIC.gif",
+      "StrongAgainst": [ "Ghost", "Psychic" ],
+      "WeakAgainst": [ "Fighting", "Dark", "Fairy" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "Fairy",
+      "Icon": "FairyIC.gif",
+      "StrongAgainst": [ "Fighting", "Dragon", "Dark" ],
+      "WeakAgainst": [ "Poison", "Steel", "Fire" ],
+      "ImmuneAgainst": []
+    },
+    {
+      "Name": "None",
+      "Icon": "UnknownIC.gif",
+      "StrongAgainst": [],
+      "WeakAgainst": [],
+      "ImmuneAgainst": []
+    }
+  ]
+}

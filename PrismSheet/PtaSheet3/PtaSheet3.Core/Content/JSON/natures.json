@@ -1,0 +1,331 @@
+﻿{
+  "Natures": [
+    {
+      "Name": "Hardy",
+      "IncreaseStat": "Health",
+      "IncreaseBy": "1",
+      "DecreaseStat": "Attack",
+      "DecreaseBy": "2",
+      "Likes": "None",
+      "Dislikes": "Spicy"
+    },
+    {
+      "Name": "Docile",
+      "IncreaseStat": "Health",
+      "IncreaseBy": "1",
+      "DecreaseStat": "Defense",
+      "DecreaseBy": "2",
+      "Likes": "None",
+      "Dislikes": "Sour"
+    },
+    {
+      "Name": "Proud",
+      "IncreaseStat": "Health",
+      "IncreaseBy": "1",
+      "DecreaseStat": "Special Attack",
+      "DecreaseBy": "2",
+      "Likes": "None",
+      "Dislikes": "Dry"
+    },
+    {
+      "Name": "Quirky",
+      "IncreaseStat": "Health",
+      "IncreaseBy": "1",
+      "DecreaseStat": "Special Defense",
+      "DecreaseBy": "2",
+      "Likes": "None",
+      "Dislikes": "Bitter"
+    },
+    {
+      "Name": "Lazy",
+      "IncreaseStat": "Health",
+      "IncreaseBy": "1",
+      "DecreaseStat": "Speed",
+      "DecreaseBy": "2",
+      "Likes": "None",
+      "Dislikes": "Sweet"
+    },
+
+
+    {
+      "Name": "Desperate",
+      "IncreaseStat": "Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Health",
+      "DecreaseBy": "1",
+      "Likes": "Spicy",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Lonely",
+      "IncreaseStat": "Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Defense",
+      "DecreaseBy": "2",
+      "Likes": "Spicy",
+      "Dislikes": "Sour"
+    },
+    {
+      "Name": "Adamant",
+      "IncreaseStat": "Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Attack",
+      "DecreaseBy": "2",
+      "Likes": "Spicy",
+      "Dislikes": "Dry"
+    },
+    {
+      "Name": "Naughty",
+      "IncreaseStat": "Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Defense",
+      "DecreaseBy": "2",
+      "Likes": "Spicy",
+      "Dislikes": "Bitter"
+    },
+    {
+      "Name": "Brave",
+      "IncreaseStat": "Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Speed",
+      "DecreaseBy": "2",
+      "Likes": "Spicy",
+      "Dislikes": "Sweet"
+    },
+
+
+    {
+      "Name": "Stark",
+      "IncreaseStat": "Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Health",
+      "DecreaseBy": "1",
+      "Likes": "Sour",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Bold",
+      "IncreaseStat": "Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Attack",
+      "DecreaseBy": "2",
+      "Likes": "Sour",
+      "Dislikes": "Spicy"
+    },
+    {
+      "Name": "Impish",
+      "IncreaseStat": "Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Attack",
+      "DecreaseBy": "2",
+      "Likes": "Sour",
+      "Dislikes": "Dry"
+    },
+    {
+      "Name": "Lax",
+      "IncreaseStat": "Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Defense",
+      "DecreaseBy": "2",
+      "Likes": "Sour",
+      "Dislikes": "Bitter"
+    },
+    {
+      "Name": "Relaxed",
+      "IncreaseStat": "Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Speed",
+      "DecreaseBy": "2",
+      "Likes": "Sour",
+      "Dislikes": "Sweet"
+    },
+
+
+    {
+      "Name": "Bashful",
+      "IncreaseStat": "Special Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Health",
+      "DecreaseBy": "1",
+      "Likes": "Dry",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Modest",
+      "IncreaseStat": "Special Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Attack",
+      "DecreaseBy": "2",
+      "Likes": "Dry",
+      "Dislikes": "Spicy"
+    },
+    {
+      "Name": "Mild",
+      "IncreaseStat": "Special Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Defense",
+      "DecreaseBy": "2",
+      "Likes": "Dry",
+      "Dislikes": "Sour"
+    },
+    {
+      "Name": "Rash",
+      "IncreaseStat": "Special Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Defense",
+      "DecreaseBy": "2",
+      "Likes": "Dry",
+      "Dislikes": "Bitter"
+    },
+    {
+      "Name": "Quiet",
+      "IncreaseStat": "Special Attack",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Speed",
+      "DecreaseBy": "2",
+      "Likes": "Dry",
+      "Dislikes": "Sweet"
+    },
+
+
+    {
+      "Name": "Sickly",
+      "IncreaseStat": "Special Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Health",
+      "DecreaseBy": "1",
+      "Likes": "Bitter",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Calm",
+      "IncreaseStat": "Special Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Attack",
+      "DecreaseBy": "2",
+      "Likes": "Bitter",
+      "Dislikes": "Spicy"
+    },
+    {
+      "Name": "Gentle",
+      "IncreaseStat": "Special Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Defense",
+      "DecreaseBy": "2",
+      "Likes": "Bitter",
+      "Dislikes": "Sour"
+    },
+    {
+      "Name": "Careful",
+      "IncreaseStat": "Special Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Attack",
+      "DecreaseBy": "2",
+      "Likes": "Bitter",
+      "Dislikes": "Dry"
+    },
+    {
+      "Name": "Sassy",
+      "IncreaseStat": "Special Defense",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Speed",
+      "DecreaseBy": "2",
+      "Likes": "Bitter",
+      "Dislikes": "Sweet"
+    },
+
+
+    {
+      "Name": "Serious",
+      "IncreaseStat": "Speed",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Health",
+      "DecreaseBy": "1",
+      "Likes": "Sweet",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Timid",
+      "IncreaseStat": "Speed",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Attack",
+      "DecreaseBy": "2",
+      "Likes": "Sweet",
+      "Dislikes": "Spicy"
+    },
+    {
+      "Name": "Hasty",
+      "IncreaseStat": "Speed",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Defense",
+      "DecreaseBy": "2",
+      "Likes": "Sweet",
+      "Dislikes": "Sour"
+    },
+    {
+      "Name": "Jolly",
+      "IncreaseStat": "Speed",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Attack",
+      "DecreaseBy": "2",
+      "Likes": "Sweet",
+      "Dislikes": "Dry"
+    },
+    {
+      "Name": "Naïve",
+      "IncreaseStat": "Speed",
+      "IncreaseBy": "2",
+      "DecreaseStat": "Special Defense",
+      "DecreaseBy": "2",
+      "Likes": "Sweet",
+      "Dislikes": "Bitter"
+    },
+
+
+    {
+      "Name": "Composed",
+      "IncreaseStat": "None",
+      "IncreaseBy": "0",
+      "DecreaseStat": "None",
+      "DecreaseBy": "0",
+      "Likes": "None",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Dull",
+      "IncreaseStat": "None",
+      "IncreaseBy": "0",
+      "DecreaseStat": "None",
+      "DecreaseBy": "0",
+      "Likes": "None",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Patient",
+      "IncreaseStat": "None",
+      "IncreaseBy": "0",
+      "DecreaseStat": "None",
+      "DecreaseBy": "0",
+      "Likes": "None",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Poised",
+      "IncreaseStat": "None",
+      "IncreaseBy": "0",
+      "DecreaseStat": "None",
+      "DecreaseBy": "0",
+      "Likes": "None",
+      "Dislikes": "None"
+    },
+    {
+      "Name": "Stoic",
+      "IncreaseStat": "None",
+      "IncreaseBy": "0",
+      "DecreaseStat": "None",
+      "DecreaseBy": "0",
+      "Likes": "None",
+      "Dislikes": "None"
+    }
+  ]
+}
