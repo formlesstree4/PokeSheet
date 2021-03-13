@@ -64,7 +64,7 @@ namespace PtaSheet
             {
                 for (int i = 0; i < ofd.FileNames.Length; i++)
                 {
-                    var x = new Forms.Sheet { MdiParent = this, PokemonList = _pokemon, MoveList = _moves };
+                    var x = new Forms.Sheet { MdiParent = this, PokemonList = _pokemon, MoveList = _moves, AbilityList = _abilities };
                     Bind(x);
                     x.Show();
                     x.LoadXml(ofd.FileNames[i]);
