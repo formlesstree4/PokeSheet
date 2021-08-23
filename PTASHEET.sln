@@ -15,19 +15,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSheet", "WpfSheet\WpfShe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrismSheet", "PrismSheet", "{5BED3F48-217A-4685-A80A-83D57BDFBE12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet3", "PrismSheet\PtaSheet3\PtaSheet3\PtaSheet3.csproj", "{0E7E59B4-1A97-4C8C-96A4-AEFB93788D78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PtaSheet3", "PrismSheet\PtaSheet3\PtaSheet3\PtaSheet3.csproj", "{0E7E59B4-1A97-4C8C-96A4-AEFB93788D78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet3.Core", "PrismSheet\PtaSheet3\PtaSheet3.Core\PtaSheet3.Core.csproj", "{A0B9E4CF-8813-44F6-B914-832598255543}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PtaSheet3.Core", "PrismSheet\PtaSheet3\PtaSheet3.Core\PtaSheet3.Core.csproj", "{A0B9E4CF-8813-44F6-B914-832598255543}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet3.Services", "PrismSheet\PtaSheet3\Services\PtaSheet3.Services\PtaSheet3.Services.csproj", "{476C747A-9A2D-49EB-9D82-54B2A4BB8974}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PtaSheet3.Services", "PrismSheet\PtaSheet3\Services\PtaSheet3.Services\PtaSheet3.Services.csproj", "{476C747A-9A2D-49EB-9D82-54B2A4BB8974}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet3.Services.Interfaces", "PrismSheet\PtaSheet3\Services\PtaSheet3.Services.Interfaces\PtaSheet3.Services.Interfaces.csproj", "{1B5E6FC4-41CB-42DE-9BB1-34B09619373C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PtaSheet3.Services.Interfaces", "PrismSheet\PtaSheet3\Services\PtaSheet3.Services.Interfaces\PtaSheet3.Services.Interfaces.csproj", "{1B5E6FC4-41CB-42DE-9BB1-34B09619373C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{19B8CABD-D680-44E0-97FA-99A8CB0F695D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2D3750D5-412D-4622-9A1E-54EE8DAE7B7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet3.Modules.SheetModule", "PrismSheet\PtaSheet3\Modules\PtaSheet3.Modules.SheetModule\PtaSheet3.Modules.SheetModule.csproj", "{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet3.Modules.Sheet", "PrismSheet\PtaSheet3\Modules\PtaSheet3.Modules.Sheet\PtaSheet3.Modules.Sheet.csproj", "{2ED78F55-40CB-4493-9FE3-304EF9EB1036}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Editors", "Editors", "{61F33104-61DE-4F31-A93C-0B73CD1D77EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtaSheet3.Modules.AbilityEditor", "PrismSheet\PtaSheet3\Modules\PtaSheet3.Modules.AbilityEditor\PtaSheet3.Modules.AbilityEditor.csproj", "{00514359-D519-4E25-B3A2-E412795C16F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,14 +111,22 @@ Global
 		{1B5E6FC4-41CB-42DE-9BB1-34B09619373C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B5E6FC4-41CB-42DE-9BB1-34B09619373C}.Release|x86.ActiveCfg = Release|Any CPU
 		{1B5E6FC4-41CB-42DE-9BB1-34B09619373C}.Release|x86.Build.0 = Release|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Debug|x86.Build.0 = Debug|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Release|x86.ActiveCfg = Release|Any CPU
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66}.Release|x86.Build.0 = Release|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Debug|x86.Build.0 = Debug|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Release|x86.ActiveCfg = Release|Any CPU
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036}.Release|x86.Build.0 = Release|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Debug|x86.Build.0 = Debug|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Release|x86.ActiveCfg = Release|Any CPU
+		{00514359-D519-4E25-B3A2-E412795C16F1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,11 +138,13 @@ Global
 		{1B5E6FC4-41CB-42DE-9BB1-34B09619373C} = {19B8CABD-D680-44E0-97FA-99A8CB0F695D}
 		{19B8CABD-D680-44E0-97FA-99A8CB0F695D} = {5BED3F48-217A-4685-A80A-83D57BDFBE12}
 		{2D3750D5-412D-4622-9A1E-54EE8DAE7B7E} = {5BED3F48-217A-4685-A80A-83D57BDFBE12}
-		{6C0E5642-D23B-42DC-86CB-E2F7BAF1BB66} = {2D3750D5-412D-4622-9A1E-54EE8DAE7B7E}
+		{2ED78F55-40CB-4493-9FE3-304EF9EB1036} = {2D3750D5-412D-4622-9A1E-54EE8DAE7B7E}
+		{61F33104-61DE-4F31-A93C-0B73CD1D77EC} = {2D3750D5-412D-4622-9A1E-54EE8DAE7B7E}
+		{00514359-D519-4E25-B3A2-E412795C16F1} = {61F33104-61DE-4F31-A93C-0B73CD1D77EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_UseGlobalSettings = False
 		SolutionGuid = {D0935A13-29DA-4EE6-8BF4-3FA96577AEF0}
+		BuildVersion_UseGlobalSettings = False
 	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True

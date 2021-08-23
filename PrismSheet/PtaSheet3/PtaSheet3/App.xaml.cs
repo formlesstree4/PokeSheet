@@ -1,5 +1,7 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
+using PtaSheet3.Services;
+using PtaSheet3.Services.Interfaces;
 using PtaSheet3.Views;
 using System.Windows;
 
@@ -18,12 +20,14 @@ namespace PtaSheet3
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // containerRegistry.RegisterSingleton<IMessageService, MessageService>();
+            containerRegistry.RegisterSingleton<IWindowProvider, WindowProvider>();
+            containerRegistry.RegisterSingleton<IAbilityDataProvider, AbilityDataProvider>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<PtaSheet3.Modules.SheetModule.SheetModuleModule>();
+            moduleCatalog.AddModule<Modules.Sheet.SheetModule>();
+            moduleCatalog.AddModule<Modules.AbilityEditor.AbilityEditorModule>();
         }
     }
 }

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\PtaSheet3.Core\PtaSheet3.Core.csproj" />
     <ProjectReference Include="..\PtaSheet3.Services.Interfaces\PtaSheet3.Services.Interfaces.csproj" />
   </ItemGroup>
 

@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace PtaSheet3.Core.Models
+﻿namespace PtaSheet3.Core.Models
 {
     public sealed class PokemonMove
     {

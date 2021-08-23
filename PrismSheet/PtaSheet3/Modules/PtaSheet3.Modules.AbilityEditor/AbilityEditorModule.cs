@@ -1,11 +1,9 @@
-﻿using PtaSheet3.Modules.SheetModule.Views;
-using Prism.Ioc;
+﻿using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Regions;
 
-namespace PtaSheet3.Modules.SheetModule
+namespace PtaSheet3.Modules.AbilityEditor
 {
-    public class SheetModuleModule : IModule
+    public class AbilityEditorModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
@@ -14,7 +12,7 @@ namespace PtaSheet3.Modules.SheetModule
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<Views.AbilityEditor>();
         }
     }
 }

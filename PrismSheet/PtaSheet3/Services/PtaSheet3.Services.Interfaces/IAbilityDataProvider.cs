@@ -34,6 +34,11 @@ namespace PtaSheet3.Services.Interfaces
         /// <returns>A non-null collection of <see cref="Ability"/></returns>
         IEnumerable<Ability> GetPokemonHighAbilities(Pokemon pokemon);
 
+        /// <summary>
+        /// Writes all changes out back to file
+        /// </summary>
+        void FlushChanges();
+
     }
 
 }

@@ -40,7 +40,6 @@ namespace PtaSheet.Forms
         
         private void PopulateGenderBox(bool male, bool female)
         {
-
             icbGender.Items.Clear();
             if (!male && !female) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Genderless", Properties.Resources.Sex_Male_Female_icon));
             if (male) icbGender.Items.Add(new ComboxExtended.ComboBoxItem("Male", Properties.Resources.Male_icon));

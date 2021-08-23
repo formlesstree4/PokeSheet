@@ -1,15 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using PtaSheet3.Core.Models;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Text;
-using System.Linq;
-using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Collections.Generic;
-using PtaSheet3.Core.Models;
 
 namespace PtaSheet3.Core.Content
 {
@@ -26,7 +24,6 @@ namespace PtaSheet3.Core.Content
         ///     Gets the Application Icon
         /// </summary>
         public static ImageSource ApplicationIcon => new BitmapImage(new Uri(Path.Combine(StartupPath, "Content", "Images", "app-icon.ico")));
-
 
         /// <summary>
         ///     Gets the absolute path where the Pokemon JSON file is located.
@@ -302,20 +299,20 @@ namespace PtaSheet3.Core.Content
         /// </summary>
         private static void ImportFromJsonFiles()
         {
-            var rawPokemonContent = File.ReadAllText(GetPokemonFile);
-            var rawMoveContent = File.ReadAllText(GetMoveFile);
-            var rawAbilityContent = File.ReadAllText(GetAbilityFile);
-            var rawNatureContent = File.ReadAllText(GetNatureFile);
-            var rawTypesContent = File.ReadAllText(GetTypesFile);
+            //var rawPokemonContent = File.ReadAllText(GetPokemonFile);
+            //var rawMoveContent = File.ReadAllText(GetMoveFile);
+            //var rawAbilityContent = File.ReadAllText(GetAbilityFile);
+            //var rawNatureContent = File.ReadAllText(GetNatureFile);
+            //var rawTypesContent = File.ReadAllText(GetTypesFile);
 
-            var pokemonCollection = JsonConvert.DeserializeObject<PokemonCollection>(rawPokemonContent);
-            var moveCollection = JsonConvert.DeserializeObject<MoveCollection>(rawMoveContent);
-            var abilityCollection = JsonConvert.DeserializeObject<AbilityCollection>(rawAbilityContent);
-            var natureCollection = JsonConvert.DeserializeObject<NatureCollection>(rawNatureContent);
-            var typeCollection = JsonConvert.DeserializeObject<TypesCollection>(rawTypesContent);
+            //var pokemonCollection = JsonConvert.DeserializeObject<PokemonCollection>(rawPokemonContent);
+            //var moveCollection = JsonConvert.DeserializeObject<MoveCollection>(rawMoveContent);
+            //var abilityCollection = JsonConvert.DeserializeObject<AbilityCollection>(rawAbilityContent);
+            //var natureCollection = JsonConvert.DeserializeObject<NatureCollection>(rawNatureContent);
+            //var typeCollection = JsonConvert.DeserializeObject<TypesCollection>(rawTypesContent);
 
             // Order the Pokemon Collection
-            pokemonCollection.Pokemon = new ObservableCollection<Pokemon>(pokemonCollection.Pokemon.OrderBy(p => p.Pokedex.National));
+            //pokemonCollection.Pokemon = new ObservableCollection<Pokemon>(pokemonCollection.Pokemon.OrderBy(p => p.Pokedex.National));
 
         }
 

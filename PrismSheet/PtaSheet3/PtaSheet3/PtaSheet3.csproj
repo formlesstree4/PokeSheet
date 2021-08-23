@@ -4,12 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <AssemblyName>PtaSheet3</AssemblyName>
+    <ApplicationIcon>app-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Prism.DryIoc" Version="8.0.0.1909" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modules\PtaSheet3.Modules.SheetModule\PtaSheet3.Modules.SheetModule.csproj" />
+    <ProjectReference Include="..\Modules\PtaSheet3.Modules.AbilityEditor\PtaSheet3.Modules.AbilityEditor.csproj" />
+    <ProjectReference Include="..\Modules\PtaSheet3.Modules.Sheet\PtaSheet3.Modules.Sheet.csproj" />
     <ProjectReference Include="..\PtaSheet3.Core\PtaSheet3.Core.csproj" />
     <ProjectReference Include="..\Services\PtaSheet3.Services.Interfaces\PtaSheet3.Services.Interfaces.csproj" />
     <ProjectReference Include="..\Services\PtaSheet3.Services\PtaSheet3.Services.csproj" />

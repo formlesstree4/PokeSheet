@@ -76,6 +76,11 @@ namespace ComboxExtended
         {
             return Items.Count;
         }
+        public new void Clear()
+        {
+            ItemsBase.Clear();
+            Items.Clear();
+        }
 
     }
 

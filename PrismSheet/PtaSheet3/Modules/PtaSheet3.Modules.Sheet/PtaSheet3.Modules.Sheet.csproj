@@ -2,16 +2,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyName>PtaSheet3.Core</AssemblyName>
+    <AssemblyName>PtaSheet3.Modules.Sheet</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
   </ItemGroup>
-
   <ItemGroup>
-    <None Update="Content\**\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\..\Services\PtaSheet3.Services.Interfaces\PtaSheet3.Services.Interfaces.csproj" />
   </ItemGroup>
-
 </Project>
