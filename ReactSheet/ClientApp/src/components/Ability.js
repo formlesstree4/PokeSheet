@@ -7,7 +7,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { Container } from '@material-ui/core';
+import { Container, Typography } from '@material-ui/core';
 
 
 export class Ability extends Component {
@@ -15,18 +15,21 @@ export class Ability extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemonAbilities: abilities.Abilities, currentAbility: abilities.Abilities[0], style: makeStyles((theme) => ({
+      pokemonAbilities: abilities.Abilities, currentAbility: abilities.Abilities[0],
+      style: makeStyles((theme) => ({
         root: {
           flexGrow: 1,
         },
         smallPaper: {
           padding: theme.spacing(2),
-          textAlign: 'right',
+          textalign: 'right',
+          align: 'right',
           color: theme.palette.text.secondary
         },
         bigPaper: {
           padding: theme.spacing(2),
-          textAlign: 'left',
+          textalign: 'left',
+          align: 'left',
           color: theme.palette.text.secondary,
         },
         formControl: {
@@ -65,7 +68,7 @@ export class Ability extends Component {
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={6} sm={3}>
-              <Paper className={this.state.style.smallPaper}>Name:</Paper>
+              <Paper className={this.state.style.smallPaper}><Typography textalign='right'>Name:</Typography></Paper>
             </Grid>
             <Grid item xs={12} sm={9}>
               <Paper className={this.state.style.bigPaper}>{this.state.currentAbility.Name}</Paper>
@@ -96,9 +99,7 @@ export class Ability extends Component {
             </Grid>
           </Grid>
         </Container>
-
       </div>
-
     );
   }
 }

@@ -10,7 +10,7 @@ import './NavMenu.css';
 export class NavMenu extends Component {
   render() {
     return (
-      <AppBar position="sticky">
+      <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h4">
             PtaSheet
