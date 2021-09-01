@@ -1,4 +1,5 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 using Prism.Regions;
 using PtaSheet3.Core.Models;
 using PtaSheet3.Services.Interfaces;
@@ -37,6 +38,11 @@ namespace PtaSheet3.Modules.AbilityEditor.ViewModels
             get => abilityDataProvider.RetrieveAbilities().Abilities;
         }
 
+
+        public DelegateCommand AddNewAbilityCommand { get; private set; }
+
+
+
         public AbilityEditorViewModel(
             IAbilityDataProvider abilityDataProvider,
             IWindowProvider windowProvider)
@@ -44,6 +50,20 @@ namespace PtaSheet3.Modules.AbilityEditor.ViewModels
             windowProvider.SetWindowTitle("Ability Editor");
             this.abilityDataProvider = abilityDataProvider;
             this.windowProvider = windowProvider;
+            AddNewAbilityCommand = new DelegateCommand(AddNewAbility);
         }
+
+
+
+        private void AddNewAbility()
+        {
+            var ability = new Ability
+            {
+                Name = "New Ability"
+            };
+            Abilities.Add(ability);
+            SelectedAbility = ability;
+        }
+
     }
 }
